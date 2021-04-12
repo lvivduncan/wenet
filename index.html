@@ -1,0 +1,374 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Усі тарифи</title>
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="qgyYomFZea8uMtJ1axkPwXzk8ZlLy_dU7tiHSOoH-WY" />
+    <link rel="stylesheet" href="https://wenet.lviv.ua/site/templates/css/style.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="https://wenet.lviv.ua/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="https://wenet.lviv.ua/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="https://wenet.lviv.ua/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="https://wenet.lviv.ua/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="https://wenet.lviv.ua/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="https://wenet.lviv.ua/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="https://wenet.lviv.ua/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="https://wenet.lviv.ua/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://wenet.lviv.ua/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="https://wenet.lviv.ua/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://wenet.lviv.ua/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://wenet.lviv.ua/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="https://wenet.lviv.ua/favicon-96x96.png">
+
+    <style>
+        :root {
+            --first: #42A5F5;
+            --second: #337AB7;
+            --red: #FF0000;
+            --rate-color: #FFFFFF;
+            --rate-bg-button: #0BD663;
+            --after: #2C94E0;
+        }
+
+/*         .black-rate .param {
+            background: url('https://wenet.lviv.ua/site/assets/files/1073/63290040-black-abstract-background-with-transparent-squares-vector-illustration.jpg') fixed;
+        } */
+    </style>
+    
+</head>
+
+<body>
+    <header id="top">
+        <div class="wrap">
+            <div id="logo">
+                <a href="https://my.wenet.lviv.ua/">
+                    <img src="https://wenet.lviv.ua/site/assets/files/1073/wenet.png" alt="">
+                </a>
+            </div>
+            <nav id="nav">
+                <ul>
+                    <li><a href='/zapitannia/'>Запитання</a></li>
+                    <li><a href='https://wenet.lviv.ua/usi-tarifi/'>Тарифи</a></li>
+                    <li><a href='https://wenet.lviv.ua/tv'>Omega-TV</a></li>
+                    <li><a href='/poslugi/'>Послуги</a></li>
+                    <li><a href='/pro-nas/'>Про Нас</a></li>
+                </ul><a href="#" id="to-cabinet" data-fancybox="form-cabinet"
+                    data-src="#form-cabinet"><span>кабінет</span></a>
+                <div id="form-cabinet" style="display: none;">
+                    <div id="msg-form" class="cabinet-msg cabinet-errmsg"></div>
+                    <form action="#">
+                        <p><label>Ім'я користувача:
+                                <input type="text" placeholder="Ім'я користувача" name="uname"></label></p>
+                        <p><label>Пароль:
+                                <input type="password" placeholder="Пароль" name="passw"></label></p><span>
+                            Запамятати?
+                        </span><input type="checkbox" id="save"><label for="save"
+                            class="toggle"><span></span></label><input type="submit" value="Увійти!"><a
+                            href="https://my.wenet.lviv.ua/cabinet/#recover">Я забув пароль, надіслати SMS</a>
+                    </form>
+                </div>
+            </nav><a id="menu-button" href=""></a>
+        </div>
+    </header>
+    <div id="breadcrumbs" style="background-image: url('https://wenet.lviv.ua/site/assets/files/1684/rate.jpg');">
+        <div class="wrap">
+            <h1>Усі тарифи</h1>
+            <ul>
+                <li><a href="/">Провайдер інтернету</a></li>
+                <li class="active">Усі тарифи</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- нова схема тарифів -->
+    <div id="fares" class="wrap">
+        
+        <div id="fares-header">
+            <h1>Інтернет - тарифи</h1>
+            <p>оберіть населений пункт</p>
+
+            <select>
+                <option selected value="0">Львів</option>
+                <option value="1">Самбір</option>
+                <option value="2">Борислав</option>
+                <option value="3">Жовківський район</option>
+            </select>            
+        </div>
+        <!-- #fares-header -->
+
+        <div id="fares-body">
+            <!-- Львів -->
+
+            <dl class="fare active">
+                <dt class="fares-tabs">
+                    <a href="" class="active">
+                        <svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M14.763.075A.5.5 0 0 1 15 .5v15a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5V14h-1v1.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V10a.5.5 0 0 1 .342-.474L6 7.64V4.5a.5.5 0 0 1 .276-.447l8-4a.5.5 0 0 1 .487.022zM6 8.694 1 10.36V15h5V8.694zM7 15h2v-1.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5V15h2V1.309l-7 3.5V15z"/><path d="M2 11h1v1H2v-1zm2 0h1v1H4v-1zm-2 2h1v1H2v-1zm2 0h1v1H4v-1zm4-4h1v1H8V9zm2 0h1v1h-1V9zm-2 2h1v1H8v-1zm2 0h1v1h-1v-1zm2-2h1v1h-1V9zm0 2h1v1h-1v-1zM8 7h1v1H8V7zm2 0h1v1h-1V7zm2 0h1v1h-1V7zM8 5h1v1H8V5zm2 0h1v1h-1V5zm2 0h1v1h-1V5zm0-2h1v1h-1V3z"/></svg>
+                        <span>Багатоквартирний будинок</span>
+                    </a>
+                    <a href="">
+                        <svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/><path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/></svg>
+                        <span>Приватний будинок</span>
+                    </a>
+                    <a href="">
+                        <svg viewBox="0 0 16 16"><path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z"/></svg>
+                        <span>Для бізнесу</span>
+                    </a>
+                    <a href="">
+                        <svg viewBox="0 0 16 16"><path d="M2.5 13.5A.5.5 0 0 1 3 13h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zM13.991 3l.024.001a1.46 1.46 0 0 1 .538.143.757.757 0 0 1 .302.254c.067.1.145.277.145.602v5.991l-.001.024a1.464 1.464 0 0 1-.143.538.758.758 0 0 1-.254.302c-.1.067-.277.145-.602.145H2.009l-.024-.001a1.464 1.464 0 0 1-.538-.143.758.758 0 0 1-.302-.254C1.078 10.502 1 10.325 1 10V4.009l.001-.024a1.46 1.46 0 0 1 .143-.538.758.758 0 0 1 .254-.302C1.498 3.078 1.675 3 2 3h11.991zM14 2H2C0 2 0 4 0 4v6c0 2 2 2 2 2h12c2 0 2-2 2-2V4c0-2-2-2-2-2z"/></svg>
+                        <span>Інтернет+ТБ</span>
+                    </a>
+                    <a href="">
+                        <svg viewBox="0 0 16 16"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm7.5-6.923c-.67.204-1.335.82-1.887 1.855-.143.268-.276.56-.395.872.705.157 1.472.257 2.282.287V1.077zM4.249 3.539c.142-.384.304-.744.481-1.078a6.7 6.7 0 0 1 .597-.933A7.01 7.01 0 0 0 3.051 3.05c.362.184.763.349 1.198.49zM3.509 7.5c.036-1.07.188-2.087.436-3.008a9.124 9.124 0 0 1-1.565-.667A6.964 6.964 0 0 0 1.018 7.5h2.49zm1.4-2.741a12.344 12.344 0 0 0-.4 2.741H7.5V5.091c-.91-.03-1.783-.145-2.591-.332zM8.5 5.09V7.5h2.99a12.342 12.342 0 0 0-.399-2.741c-.808.187-1.681.301-2.591.332zM4.51 8.5c.035.987.176 1.914.399 2.741A13.612 13.612 0 0 1 7.5 10.91V8.5H4.51zm3.99 0v2.409c.91.03 1.783.145 2.591.332.223-.827.364-1.754.4-2.741H8.5zm-3.282 3.696c.12.312.252.604.395.872.552 1.035 1.218 1.65 1.887 1.855V11.91c-.81.03-1.577.13-2.282.287zm.11 2.276a6.696 6.696 0 0 1-.598-.933 8.853 8.853 0 0 1-.481-1.079 8.38 8.38 0 0 0-1.198.49 7.01 7.01 0 0 0 2.276 1.522zm-1.383-2.964A13.36 13.36 0 0 1 3.508 8.5h-2.49a6.963 6.963 0 0 0 1.362 3.675c.47-.258.995-.482 1.565-.667zm6.728 2.964a7.009 7.009 0 0 0 2.275-1.521 8.376 8.376 0 0 0-1.197-.49 8.853 8.853 0 0 1-.481 1.078 6.688 6.688 0 0 1-.597.933zM8.5 11.909v3.014c.67-.204 1.335-.82 1.887-1.855.143-.268.276-.56.395-.872A12.63 12.63 0 0 0 8.5 11.91zm3.555-.401c.57.185 1.095.409 1.565.667A6.963 6.963 0 0 0 14.982 8.5h-2.49a13.36 13.36 0 0 1-.437 3.008zM14.982 7.5a6.963 6.963 0 0 0-1.362-3.675c-.47.258-.995.482-1.565.667.248.92.4 1.938.437 3.008h2.49zM11.27 2.461c.177.334.339.694.482 1.078a8.368 8.368 0 0 0 1.196-.49 7.01 7.01 0 0 0-2.275-1.52c.218.283.418.597.597.932zm-.488 1.343a7.765 7.765 0 0 0-.395-.872C9.835 1.897 9.17 1.282 8.5 1.077V4.09c.81-.03 1.577-.13 2.282-.287z"/></svg>
+                        <span>Домашній інтернет</span>
+                    </a>
+                </dt>
+                
+                <dd class="fares-panes">
+                    <div class="active">
+                        <article class="tariff">
+                            <div class="marker">
+                                action
+                            </div>
+
+                            <h1>Ультра</h1>
+
+                            <div class="speed full">
+                                до <strong>1000</strong> Мбіт/с
+                            </div>
+
+                            <div class="options">
+                                <h5>Додаткові опції</h5>
+                                <ul>
+                                    <li>реальна IP-адреса</li>
+                                    <li>екстра дні</li>
+                                    <li>інтернет пауза</li>
+                                    <li>та інше</li>
+                                </ul>
+
+                                <h5>Акційні пропозиції</h5>
+                                <ul>
+                                    <li>підключи друга</li>
+                                </ul>
+                            </div>
+
+                            <div class="price">
+                                <strong>225</strong> грн/міс, далі 325
+                            </div>
+
+                            <div class="view">
+                                <a href="#">Детально</a>
+                            </div>
+
+                            <div class="note">
+                                Мережевим кабелем 500 грн <br />
+                                Оптоволоконним кабелем 1500 грн
+                            </div>
+                            
+                        </article>
+                        <article class="tariff">
+                            <h1>Преміум</h1>
+
+                            <div class="speed half">
+                                до <strong>200</strong> Мбіт/с
+                            </div>
+
+                            <div class="options">
+                                <h5>Додаткові опції</h5>
+                                <ul>
+                                    <li>реальна IP-адреса</li>
+                                    <li>екстра дні</li>
+                                    <li>інтернет пауза</li>
+                                    <li>та інше</li>
+                                </ul>
+
+                                <h5>Акційні пропозиції</h5>
+                                <ul>
+                                    <li>підключи друга</li>
+                                </ul>
+                            </div>
+
+                            <div class="price">
+                                <strong>180</strong> грн/міс
+                            </div>
+
+                            <div class="view">
+                                <a href="#">Детально</a>
+                            </div>
+                            
+                        </article>
+                        <article class="tariff">
+                            <h1>Базовий</h1>
+
+                            <div class="speed">
+                                до <strong>50</strong> Мбіт/с
+                            </div>
+
+                            <div class="options">
+                                <h5>Додаткові опції</h5>
+                                <ul>
+                                    <li>реальна IP-адреса</li>
+                                    <li>екстра дні</li>
+                                </ul>
+                            </div>
+
+                            <div class="price">
+                                <strong>120</strong> грн/міс
+                            </div>
+
+                            <div class="view">
+                                <a href="#">Детально</a>
+                            </div>
+                            
+                        </article>
+                    </div>
+                    <div>2</div>
+                    <div>3</div>
+                    <div>4</div>
+                    <div>5</div>
+                </dd>
+            </dl>
+
+            <dl class="fare">
+                <dt>Термин 1</dt>
+                <dd>Определение термина 1</dd>
+
+                <dt>Термин 2</dt>
+                <dd>Определение термина 2</dd>
+            </dl>
+
+<!-- 
+            <div class="fare active">
+                <ul class="fares-tabs">
+                    <li><i>1</i><span>Багатоквартирний будинок</span></li>
+                    <li><i>2</i><span>Приватний будинок</span></li>
+                    <li><i>3</i><span>Для бізнесу</span></li>
+                    <li><i>4</i><span>Інтернет+ТБ</span></li>
+                    <li><i>5</i><span>Домашній інтернет</span></li>
+                </ul>
+
+                <ul class="fares-panes">
+                    <li class="active">
+                        <article class="tariff">
+                            <h1>Ультра</h1>
+
+                            <div class="speed">
+                                до <strong>1000</strong> Мбіт/с
+                            </div>
+
+                            <div class="timeline">
+                                <i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+                                <i class="empty"></i>
+                                <i class="empty"></i>
+                                <i class="empty"></i>
+                            </div>
+
+                            <div class="options">
+                                <h5>Додаткові опції</h5>
+                                <ul>
+                                    <li>реальна IP-адреса</li>
+                                    <li>екстра дні</li>
+                                    <li>інтернет пауза</li>
+                                    <li>та інше</li>
+                                </ul>
+
+                                <h5>Акційні пропозиції</h5>
+                                <ul>
+                                    <li>підключи друга</li>
+                                </ul>
+                            </div>
+
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia voluptas suscipit culpa iure obcaecati accusantium saepe. Ipsa nulla consequatur omnis, hic deserunt quos aliquam molestiae, aliquid eos architecto minima. Voluptatem recusandae modi quisquam quo minima consequuntur ea nostrum reiciendis dignissimos porro itaque magni beatae ipsum non commodi, illo nobis id dicta labore quae tempora ut voluptate! Deleniti ut dolore beatae labore unde ea quidem explicabo. Magni ab provident repellendus. Molestiae iusto ullam maiores, vel natus nemo laborum impedit excepturi, dolorum aliquam ipsam consectetur ipsum quae rerum autem saepe totam sit? Aliquid accusamus hic, sequi voluptatem illo ea quidem totam veritatis dolorum, asperiores architecto cum necessitatibus alias consequatur debitis itaque perspiciatis dicta error magni! Quidem aperiam sint id, iste, quaerat nisi distinctio doloremque qui illo similique sequi nobis dolorum corrupti eveniet autem, quod praesentium impedit dolore! Explicabo amet sapiente voluptatum similique culpa quis error? Sunt, reiciendis debitis placeat assumenda eaque deleniti dolores a. Ratione, perspiciatis? Quisquam possimus optio sit perferendis soluta qui maxime dolorum explicabo, quos distinctio deleniti tempora aut repellendus aperiam perspiciatis repudiandae mollitia ab unde nihil? Itaque reprehenderit sed ullam explicabo, nostrum amet, libero commodi neque sequi est quisquam, illum dolor recusandae ipsa corporis mollitia numquam excepturi quidem nulla dignissimos consequuntur dicta velit. Reprehenderit, quod nostrum. Doloremque dolores ratione consectetur libero odit ipsam voluptatum rerum id dolor, earum amet aspernatur, cum fuga ullam enim debitis vel sint! Exercitationem, unde incidunt at totam ducimus quae quia temporibus, natus ipsum numquam ex. Fugiat corrupti, et suscipit distinctio saepe aliquid laboriosam quia eligendi impedit explicabo, neque, dicta magni tempore illum a quam odit amet nisi. Facere dolores officia distinctio enim ipsum cum dicta, consectetur vel doloremque ad provident eius magni asperiores tempora eos numquam fugit? Dolore accusantium, quis animi, ab, temporibus impedit debitis expedita assumenda eos error dolorem quibusdam excepturi et! Sint.
+                        </article>
+                        <article class="tariff">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia voluptas suscipit culpa iure obcaecati accusantium saepe. Ipsa nulla consequatur omnis, hic deserunt quos aliquam molestiae, aliquid eos architecto minima. Voluptatem recusandae modi quisquam quo minima consequuntur ea nostrum reiciendis dignissimos porro itaque magni beatae ipsum non commodi, illo nobis id dicta labore quae tempora ut voluptate! Deleniti ut dolore beatae labore unde ea quidem explicabo. Magni ab provident repellendus. Molestiae iusto ullam maiores, vel natus nemo laborum impedit excepturi, dolorum aliquam ipsam consectetur ipsum quae rerum autem saepe totam sit? Aliquid accusamus hic, sequi voluptatem illo ea quidem totam veritatis dolorum, asperiores architecto cum necessitatibus alias consequatur debitis itaque perspiciatis dicta error magni! Quidem aperiam sint id, iste, quaerat nisi distinctio doloremque qui illo similique sequi nobis dolorum corrupti eveniet autem, quod praesentium impedit dolore! Explicabo amet sapiente voluptatum similique culpa quis error? Sunt, reiciendis debitis placeat assumenda eaque deleniti dolores a. Ratione, perspiciatis? Quisquam possimus optio sit perferendis soluta qui maxime dolorum explicabo, quos distinctio deleniti tempora aut repellendus aperiam perspiciatis repudiandae mollitia ab unde nihil? Itaque reprehenderit sed ullam explicabo, nostrum amet, libero commodi neque sequi est quisquam, illum dolor recusandae ipsa corporis mollitia numquam excepturi quidem nulla dignissimos consequuntur dicta velit. Reprehenderit, quod nostrum. Doloremque dolores ratione consectetur libero odit ipsam voluptatum rerum id dolor, earum amet aspernatur, cum fuga ullam enim debitis vel sint! Exercitationem, unde incidunt at totam ducimus quae quia temporibus, natus ipsum numquam ex. Fugiat corrupti, et suscipit distinctio saepe aliquid laboriosam quia eligendi impedit explicabo, neque, dicta magni tempore illum a quam odit amet nisi. Facere dolores officia distinctio enim ipsum cum dicta, consectetur vel doloremque ad provident eius magni asperiores tempora eos numquam fugit? Dolore accusantium, quis animi, ab, temporibus impedit debitis expedita assumenda eos error dolorem quibusdam excepturi et! Sint.
+                        </article>
+                        <article class="tariff">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia voluptas suscipit culpa iure obcaecati accusantium saepe. Ipsa nulla consequatur omnis, hic deserunt quos aliquam molestiae, aliquid eos architecto minima. Voluptatem recusandae modi quisquam quo minima consequuntur ea nostrum reiciendis dignissimos porro itaque magni beatae ipsum non commodi, illo nobis id dicta labore quae tempora ut voluptate! Deleniti ut dolore beatae labore unde ea quidem explicabo. Magni ab provident repellendus. Molestiae iusto ullam maiores, vel natus nemo laborum impedit excepturi, dolorum aliquam ipsam consectetur ipsum quae rerum autem saepe totam sit? Aliquid accusamus hic, sequi voluptatem illo ea quidem totam veritatis dolorum, asperiores architecto cum necessitatibus alias consequatur debitis itaque perspiciatis dicta error magni! Quidem aperiam sint id, iste, quaerat nisi distinctio doloremque qui illo similique sequi nobis dolorum corrupti eveniet autem, quod praesentium impedit dolore! Explicabo amet sapiente voluptatum similique culpa quis error? Sunt, reiciendis debitis placeat assumenda eaque deleniti dolores a. Ratione, perspiciatis? Quisquam possimus optio sit perferendis soluta qui maxime dolorum explicabo, quos distinctio deleniti tempora aut repellendus aperiam perspiciatis repudiandae mollitia ab unde nihil? Itaque reprehenderit sed ullam explicabo, nostrum amet, libero commodi neque sequi est quisquam, illum dolor recusandae ipsa corporis mollitia numquam excepturi quidem nulla dignissimos consequuntur dicta velit. Reprehenderit, quod nostrum. Doloremque dolores ratione consectetur libero odit ipsam voluptatum rerum id dolor, earum amet aspernatur, cum fuga ullam enim debitis vel sint! Exercitationem, unde incidunt at totam ducimus quae quia temporibus, natus ipsum numquam ex. Fugiat corrupti, et suscipit distinctio saepe aliquid laboriosam quia eligendi impedit explicabo, neque, dicta magni tempore illum a quam odit amet nisi. Facere dolores officia distinctio enim ipsum cum dicta, consectetur vel doloremque ad provident eius magni asperiores tempora eos numquam fugit? Dolore accusantium, quis animi, ab, temporibus impedit debitis expedita assumenda eos error dolorem quibusdam excepturi et! Sint.
+                        </article>
+                    </li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                    <li>5</li>
+                </ul>
+            </div>
+ -->
+            <!-- Самбір -->
+            <div class="fare">
+                <h1>hide</h1>
+            </div>
+
+            <!-- Борислав -->
+            <div class="fare">
+                <h1>hide</h1>
+            </div>
+
+            <!-- Жовківський район -->
+            <div class="fare">
+                <h1>hide</h1>
+            </div>
+        </div>
+        <!-- #fares-body -->
+
+    </div>
+    <!-- //нова схема тарифів -->
+    
+    <footer role="contentinfo" id="footer">
+        <div class="wrap">
+            <div id="footer-contacts">
+                <h3 class="title">Контакти</h3>
+                <div class="footer-contacts">
+                    <div class="footer-contact">
+                        <h4>Львів / Самбір / Жовківський р-н.</h4>
+                        <p>Графік роботи:<br />
+                            (Пн-Нд 09:00-21:00)</p>
+                        <p>Телефони: </p>
+                        <p><a href="tel:0634224004" title="(063) 422-4004">(063) 422-4004</a></p>
+                        <p><a href="tel:0984224004" title="(098) 422-4004">(098) 422-4004</a></p>
+                        <p><a href="tel:0994224004" title="(099) 422-4004">(099) 422-4004</a></p>
+                        <p>E-mail:<br />
+                            info@wenet.lviv.ua</p>
+                    </div>
+                    <div class="footer-contact">
+                        <h4>м. Борислав</h4>
+                        <p>Графік роботи:<br />
+                            (Пн-Сб 09:00-21:00) (Нд 12:00-18:00)</p>
+                        <p>Телефони:</p>
+                        <p><a href="tel:0636416133">(063) 641-61-33</a></p>
+                        <p><a href="tel:0987466111">(098) 746-61-11</a></p>
+                        <p> </p>
+                        <p>E-mail:<br />
+                            info@wenet.lviv.ua</p>
+                        <p> </p>
+                    </div>
+                </div>
+            </div>
+            <div id="footer-desc">
+                <figure><img src="https://wenet.lviv.ua/site/assets/files/1073/wenet_sirii.png" alt=""></figure>
+                <p>
+                <p>Ми пропонуємо широкий вибір послуг із доступу до мережі Інтернет як для приватних, так і комерційних
+                    клієнтів. У нас Ви завжди зможете отримати оперативну та кваліфіковану технічну підтримку в усіх
+                    питаннях, що стосуються Вашої роботи в мережі Інтернет.</p>
+                <p><img alt="" src="https://wenet.lviv.ua/site/assets/files/1073/visa-mastercard.png" width="200" /></p>
+                </p>
+            </div>
+        </div>
+    </footer>
+    <footer id="copy">
+        <div class="wrap">
+            <p>© Copyright 2005-2019 <a href="https://my.wenet.lviv.ua/">Wenet</a> | All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/init.js"></script>
+    <script src="js/rate.js"></script>
+</body>
+
+</html>
