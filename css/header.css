@@ -1,17 +1,22 @@
 #header{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     height: 128px;
     border-bottom: 5px solid rgba(0, 0, 0, 0.05);
 }
 
+#header .wrap{
+    height: 128px;
+    display: grid;
+    grid-template-columns: 240px auto;
+    align-items: center;
+    
+}
+/* 
 #logo{
     width: 20%;
-}
+} */
 
 #nav{
-    width: 80%;
+    /* width: 80%; */
     display: flex;
     align-items: center;
 }
@@ -59,4 +64,30 @@
 
 #nav-panel a:hover svg{
     stroke: var(--second);
+}
+
+/**/
+#menu-button{
+    display: none;
+}
+
+@media(max-width:996px) {
+    #menu-button{
+        display: block;
+        margin: 0 0 0 auto;
+    }
+
+    #nav{
+        display: none;
+    }
+}
+
+#menu-button svg{
+    width: 24px;
+    height: 24px;
+    fill: none;
+    stroke: var(--dark);
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
 }
