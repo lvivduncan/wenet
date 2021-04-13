@@ -1,0 +1,62 @@
+#header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 128px;
+    border-bottom: 5px solid rgba(0, 0, 0, 0.05);
+}
+
+#logo{
+    width: 20%;
+}
+
+#nav{
+    width: 80%;
+    display: flex;
+    align-items: center;
+}
+
+#nav ul{
+    display: block;
+    padding: 0 30px;
+}
+
+#nav li{
+    display: inline-block;
+    margin: 0 10px;
+}
+
+#nav li a{
+    color: var(--gray);
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: 0.5s;
+    font-weight: 600;
+}
+
+#nav li a:hover{
+    color: var(--first);
+}
+
+/* іконки */
+#nav-panel{
+    margin: 0 0 0 auto;
+}
+
+#nav-panel a{
+    text-decoration: none;
+}
+
+#nav-panel svg{
+    width: 18px;
+    height: 18px;
+    fill: none;
+    stroke: var(--dark);
+    stroke-width: 2; 
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+#nav-panel a:hover svg{
+    stroke: var(--second);
+}

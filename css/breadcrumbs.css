@@ -1,0 +1,46 @@
+#breadcrumbs {
+    min-height: 260px;
+    background: url("../images/breadcrumbs.jpg") fixed;
+}
+
+#breadcrumbs .wrap {
+    min-height: 260px;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    color: var(--lightgray);
+}
+
+@media (max-width: 776px) {
+    #breadcrumbs .wrap {
+        justify-content: center;
+        flex-direction: column;
+    }
+}
+
+#breadcrumbs h1 {
+    color: var(--light);
+    text-align: center;
+}
+
+#breadcrumbs ul {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+#breadcrumbs li {
+    display: inline-block;
+}
+
+#breadcrumbs li::before {
+    color: var(--lightgray);
+    content: "<";
+    padding: 0 13px;
+}
+
+#breadcrumbs li:first-child::before {
+    color: var(--lightgray);
+    content: "";
+    padding: 0;
+}

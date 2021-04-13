@@ -1,0 +1,7 @@
+#content{
+    margin: 75px 0;
+}
+
+#content .wrap {
+    flex-wrap: wrap;
+}

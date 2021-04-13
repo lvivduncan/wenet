@@ -1,0 +1,80 @@
+/* темп */
+*,::after,::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --first: #42A5F5;
+    --second: #337AB7;
+
+    --panel-border: #dbdbdb;
+    --panel-hover: #f5f5f5;
+
+    --dark: #777;
+
+    --light: #fffff0;
+}
+
+#fares{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: block;
+    font-size: 13px;
+}
+
+
+.fares{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 30px;
+    margin: 30px 0;
+}
+
+#fares dt{
+    display: flex;
+    margin: 0 0 5px;
+    justify-content: center;
+    border-bottom: 1px solid var(--panel-border);
+}
+
+/* кнопка на вкладці */
+#fares dt a{
+    display: block;
+    padding: 6px;
+    background: var(--panel-border);
+    color: var(--dark);
+    margin: 5px 5px 0;
+    text-decoration: none;
+    width: 100%;
+    max-width: 200px;
+    border-radius: 10px 10px 0 0;
+}
+
+#fares dt a.active{
+    background: var(--first);
+    color: var(--light);
+}
+
+#fares dt a:hover{
+    background: var(--second);
+    color: var(--light);
+    transition: .5s;
+}
+
+/* mobile */
+@media(max-width: 570px){
+    #fares dt{
+        display: none;
+    }
+    #fares dt.first-line{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-gap: 0 10px;
+    }
+    #fares dt.first-line a{
+        max-width: 100%;
+    }
+}
