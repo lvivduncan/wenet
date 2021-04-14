@@ -1,0 +1,54 @@
+
+/* нижня смуга */
+#nav{
+    display: flex;
+    align-items: center;
+    background: var(--gray-light);
+    height: 70px;
+    box-shadow: 
+        0 0 5px 0 rgb(0 0 0 / 20%);
+}
+
+@media(max-width: 996px) {
+    #nav{
+        display: none;
+    }
+}
+
+#nav .wrap{
+    display: flex;
+    justify-content: center;
+}
+
+#nav ul{
+    display: block;
+    text-align: center;
+}
+
+#nav li{
+    display: inline-block;
+    margin: 0 6px;
+}
+
+#nav li a{
+    color: var(--gray-dark);
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: 0.5s;
+    font-weight: 600;
+}
+
+#nav li a:hover{
+    color: var(--first);
+}
+
+#nav li svg{
+    width: 18px;
+    height: 18px;
+    fill: none;
+    stroke: var(--purpur);
+    stroke-width: 3; 
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    margin: 0 0 0 10px;
+}

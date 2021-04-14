@@ -1,0 +1,51 @@
+
+/* випадачка */
+/* основна обгортка */
+.levus-dropdown{
+    position: relative;
+}
+
+/* схований блок */
+.levus-dropdown-content{
+    position: absolute;
+    left: -80px;
+    z-index: 2;
+    width: 260px;
+    padding: 10px;
+    border: 1px solid #dfdfdf;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 0 rgb(0 0 0 / 20%);
+    background: var(--gray-lightly);
+    margin: 15px 0 0;
+
+    transform-origin: 0 0;
+    transform: rotateX(90deg);
+    transition: .5s;
+
+    font-size: 14px;
+}
+
+@media(max-width:996px) {
+    .levus-dropdown-content{
+        left: auto;
+        right: 0;
+    }
+}
+
+.levus-dropdown .levus-dropdown-content.open{    
+    transform: rotateX(0);
+}
+
+.levus-dropdown-wrapper{
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: none;
+}
+
+.levus-dropdown-wrapper.open{
+    display: block;
+}

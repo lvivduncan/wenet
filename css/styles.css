@@ -4,6 +4,10 @@
 
 @import url('./header.css');
 
+@import url('./nav.css');
+
+@import url('./levus-dropdown.css');
+
 @import url('./slider.css');
 
 @import url('./breadcrumbs.css');
