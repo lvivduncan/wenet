@@ -57,7 +57,7 @@
     margin: 0 0 0 10px;
 }
 
-@media(max-width:996px) {
+@media(max-width:776px) {
     #nav-panel svg{
         margin: 0;
     }
@@ -67,7 +67,7 @@
     stroke: var(--first);
 }
 
-@media(max-width:996px) {
+@media(max-width:776px) {
     #nav-panel span{
         display: none;
     }
@@ -80,7 +80,7 @@
     display: none!important;
 }
 
-@media(max-width:996px) {
+@media(max-width: 776px) {
     #menu-button{
         display: inline-flex!important;
     }
