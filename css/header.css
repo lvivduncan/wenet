@@ -32,7 +32,8 @@
     display: block;
 }
 
-#nav-panel a{
+#nav-panel a,
+#nav-panel .nav-panel{
     color: var(--dark);
     text-decoration: none;
     transition: .5s;
@@ -40,9 +41,11 @@
     align-items: center;
     margin-left: 10px;
     font-weight: 600;
+    cursor: pointer;
 }
 
-#nav-panel a:hover{
+#nav-panel a:hover,
+#nav-panel .nav-panel:hover{
     color: var(--first)
 }
 
@@ -63,7 +66,7 @@
     }
 }
 
-#nav-panel a:hover svg{
+#nav-panel .nav-panel:hover svg{
     stroke: var(--first);
 }
 
@@ -95,6 +98,11 @@
 
 
 /* контент у випадачці */
+#nav-panel .levus-dropdown-content .cities li{
+    margin: 10px 0 10px 10px;
+    cursor: pointer;
+}
+
 #nav-panel .levus-dropdown-content p{
     margin: 0 0 10px;
     text-align: center;
@@ -160,6 +168,28 @@
     font-size: 12px;
     display: inline-block;
     margin: 5px 0;
+}
+
+/* телефони */
+.phones{
+    display: none;
+}
+
+.phones.open{
+    display: block;
+}
+
+/* розклад */
+#shedule{
+    text-align: center;
+}
+
+.shedule{
+    display: none;
+}
+
+.shedule.open{
+    display: inline-block;
 }
 
 

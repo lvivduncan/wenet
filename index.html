@@ -26,31 +26,31 @@
             <nav id="nav-panel">
                 <ul>
                     <li class="levus-dropdown" id="nav-panel-city">
-                        <a href="">
-                            <span>Львів</span>
+                        <div class="nav-panel">
+                            <span id="city">Львів</span>
                             <svg viewBox="0 0 24 24">
                                 <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
                                 <circle cx="12" cy="10" r="3"></circle>
                             </svg>
-                        </a>
+                        </div>
                         <div class="levus-dropdown-content">
                             <h5>Оберіть локацію</h5>
-                            <ul>
-                                <li><a href="">Львів</a> </li>
-                                <li><a href="">Самбір</a> </li>
-                                <li><a href="">Борислав</a> </li>
-                                <li><a href="">Жовківський район</a> </li>
+                            <ul class="cities">
+                                <li>Львів</li>
+                                <li>Самбір</li>
+                                <li>Борислав</li>
+                                <li>Жовківський район</li>
                             </ul>
                         </div>
                     </li>
                     <li class="levus-dropdown" id="nav-panel-cabinet">
-                        <a href="" title="кабінет">
+                        <div class="nav-panel">
                             <span>Користувач</span>
                             <svg viewBox="0 0 24 24">
                                 <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
                                 <circle cx="12" cy="7" r="4"></circle>
                             </svg>
-                        </a>
+                        </div>
                         <div class="levus-dropdown-content">
 
                             <form action="#">
@@ -79,24 +79,38 @@
                         </div>
                     </li>
                     <li class="levus-dropdown" id="nav-panel-contacts">
-                        <a href="">
+                        <div class="nav-panel">
                             <span>Контакти</span>
                             <svg viewBox="0 0 24 24">
                                 <path
                                     d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
                                 </path>
                             </svg>
-                        </a>
+                        </div>
                         <div class="levus-dropdown-content">
                             <h5>Львів</h5>
 
-                            <p><em>Графік роботи: (Пн-Нд 09:00-21:00)</em></p>
+                            <div id="shedule">Графік роботи: 
+                                <!-- для Борислава -->
+                                <span class="shedule">(Пн-Сб 09:00-21:00) (Нд 12:00-18:00)</span>
+                                <!-- для решти -->
+                                <span class="shedule open">(Пн-Нд 09:00-21:00)</span> 
+                            </div>
 
                             <h5>Телефони:</h5>
 
-                            <p><a href="tel:0634224004" title="(063) 422-4004">(063) 422-4004</a></p>
-                            <p><a href="tel:0984224004" title="(098) 422-4004">(098) 422-4004</a></p>
-                            <p><a href="tel:0994224004" title="(099) 422-4004">(099) 422-4004</a></p>
+                            <!-- для Борислава -->
+                            <div class="phones">
+                                <p><a href="tel:0636416133">(063) 641-61-33</a></p>
+                                <p><a href="tel:0987466111">(098) 746-61-11</a></p>
+                            </div>
+
+                            <!-- для решти -->
+                            <div class="phones open">
+                                <p><a href="tel:0634224004">(063) 422-4004</a></p>
+                                <p><a href="tel:0984224004">(098) 422-4004</a></p>
+                                <p><a href="tel:0994224004">(099) 422-4004</a></p>
+                            </div>
 
                             <p><em>E-mail: <a href="mailto:info@wenet.lviv.ua">info@wenet.lviv.ua</a></em></p>
                         </div>
