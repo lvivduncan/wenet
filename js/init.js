@@ -3,6 +3,7 @@
 $('body').append('<div class="levus-dropdown-wrapper"></div>');
 
 $('.nav-panel').on('click', function(){
+    $('.levus-dropdown-content').removeClass('open');
     $(this).next('.levus-dropdown-content').toggleClass('open');
     $('.levus-dropdown-wrapper').toggleClass('open');
 });
