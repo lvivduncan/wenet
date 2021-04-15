@@ -25,6 +25,13 @@
     font-size: 14px;
 }
 
+@media(max-width:370px) {
+    .levus-dropdown-content{
+        position: fixed;
+        right: calc(50% - 145px);
+    }
+}
+
 .levus-dropdown .levus-dropdown-content.open{    
     transform: rotateX(0);
 }

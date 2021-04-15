@@ -2,10 +2,22 @@
 // плагін дропдауна
 $('body').append('<div class="levus-dropdown-wrapper"></div>');
 
+// лічильник кліків
+var cnt = 0;
+
 $('.nav-panel').on('click', function(){
+
     $('.levus-dropdown-content').removeClass('open');
-    $(this).next('.levus-dropdown-content').toggleClass('open');
+
+    if(cnt%2 == 0){
+        $(this).next('.levus-dropdown-content').addClass('open');
+    } else {
+        $(this).next('.levus-dropdown-content').removeClass('open');
+    }
+
     $('.levus-dropdown-wrapper').toggleClass('open');
+
+    cnt++;
 });
 
 $('.levus-dropdown-wrapper').on('click', function(){
