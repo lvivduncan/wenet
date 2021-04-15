@@ -17,12 +17,14 @@
     box-shadow: 0 0 5px 0 rgb(0 0 0 / 20%);
     background: var(--gray-lightly);
     margin: 15px 0 0;
-
-    transform-origin: 0 0;
-    transform: rotateX(90deg);
-    transition: .5s;
-
     font-size: 14px;
+
+/*     transform-origin: 0 0;
+    transform: rotateX(90deg);
+    transition: .5s; */
+
+    display: none;
+
 }
 
 @media(max-width:370px) {
@@ -33,7 +35,8 @@
 }
 
 .levus-dropdown .levus-dropdown-content.open{    
-    transform: rotateX(0);
+    /* transform: rotateX(0); */
+    display: block;
 }
 
 .levus-dropdown-wrapper{
