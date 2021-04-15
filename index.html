@@ -8,6 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="image/png" sizes="128x128" href="images/favicon.png">
 </head>
 
 <body>
@@ -24,7 +25,7 @@
 
             <nav id="nav-panel">
                 <ul>
-                    <li class="levus-dropdown">
+                    <li class="levus-dropdown" id="nav-panel-city">
                         <a href="">
                             <span>Львів</span>
                             <svg viewBox="0 0 24 24">
@@ -33,7 +34,7 @@
                             </svg>
                         </a>
                         <div class="levus-dropdown-content">
-                            <p>Оберіть локацію</p>
+                            <h5>Оберіть локацію</h5>
                             <ul>
                                 <li><a href="">Львів</a> </li>
                                 <li><a href="">Самбір</a> </li>
@@ -42,7 +43,7 @@
                             </ul>
                         </div>
                     </li>
-                    <li class="levus-dropdown">
+                    <li class="levus-dropdown" id="nav-panel-cabinet">
                         <a href="" title="кабінет">
                             <span>Користувач</span>
                             <svg viewBox="0 0 24 24">
@@ -72,12 +73,12 @@
 
                                 <input type="submit" value="Увійти!">
 
-                                <a href="/cabinet/#recover" class="sms">Я забув пароль, надіслати SMS</a>
+                                <p>(<a href="/cabinet/#recover" class="text-center">Я забув пароль, надіслати SMS</a>)</p>
                             </form>
 
                         </div>
                     </li>
-                    <li>
+                    <li class="levus-dropdown" id="nav-panel-contacts">
                         <a href="">
                             <span>Контакти</span>
                             <svg viewBox="0 0 24 24">
@@ -86,6 +87,19 @@
                                 </path>
                             </svg>
                         </a>
+                        <div class="levus-dropdown-content">
+                            <h5>Львів</h5>
+
+                            <p><em>Графік роботи: (Пн-Нд 09:00-21:00)</em></p>
+
+                            <h5>Телефони:</h5>
+
+                            <p><a href="tel:0634224004" title="(063) 422-4004">(063) 422-4004</a></p>
+                            <p><a href="tel:0984224004" title="(098) 422-4004">(098) 422-4004</a></p>
+                            <p><a href="tel:0994224004" title="(099) 422-4004">(099) 422-4004</a></p>
+
+                            <p><em>E-mail: <a href="mailto:info@wenet.lviv.ua">info@wenet.lviv.ua</a></em></p>
+                        </div>
                     </li>
                     <li id="menu-button">
                         <a href="">
@@ -131,7 +145,79 @@
     <!-- nav#nav -->
 
     <div id="slider">
-        <img src="temp/1.png" alt="">
+
+        <div class="wrap">
+            <div class="owl-carousel owl-theme">
+                <div class="item">
+                    <div class="item-description">
+                        <h1>Заголовок h1</h1>
+                    </div>
+                    <div class="item-image">
+                        <img src="temp/slide-1.png" alt="">
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item-description">
+                        <h2>Заголовок h2</h2>
+                    </div>
+                    <div class="item-image">
+                        <img src="temp/slide-1.png" alt="">
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item-description">
+                        <h3>Заголовок h3</h3>
+                    </div>
+                    <div class="item-image">
+                        <img src="temp/slide-1.png" alt="">
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item-description">
+                        <h4>Заголовок h4</h4>
+                    </div>
+                    <div class="item-image">
+                        <img src="temp/slide-1.png" alt="">
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="item-description">
+                        <p style="color:var(--purpur)">Теги: </p>
+
+                        <p>Звичайний текст. Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+
+                        <p><small>small</small></p>
+                        <p><cite>cite</cite></p>
+                        <p><strong>strong</strong></p>
+                        <p><em>em</em></p>
+                        <p><a href="">link</a></p>
+
+                    </div>
+                    <div class="item-image">
+                        <img src="temp/slide-1.png" alt="">
+                    </div>
+
+                </div>
+                <div class="item">
+                    <div class="item-description">
+                        <p style="color:var(--purpur)">(приклад)</p>
+
+                        <h3><cite>Найліпша пропозиція</cite></h3>
+
+                        <p><cite>Замов вже</cite> нині</cite> і <em>отримай знижку</em> <strong>100</strong> гривень</p>
+                        <p><a href="">замовити!</a></p>
+
+                    </div>
+                    <div class="item-image">
+                        <img src="temp/slide-1.png" alt="">
+                    </div>
+
+                </div>
+
+            </div>            
+        </div>
+
     </div>
 
     <div id="articles">
@@ -232,6 +318,7 @@
     </footer>
 
     <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/owl.carousel.js"></script>
     <script src="js/init.js"></script>
 
     <!--     

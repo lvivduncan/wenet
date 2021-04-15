@@ -10,6 +10,11 @@
     --gray: #e5e5e5;
     --gray-dark: #222;
 
+    --green-light: #76e46e;
+    --green: #1e8f16;
+    --green-dark: #106809;
+
+    --red: #b31414;
 
 
 /*     --light: #fffff0;
@@ -160,4 +165,8 @@ img{
     margin-left: 30px;
     position: relative;
     bottom: -5px;
+}
+
+.text-center{
+    text-align: center;
 }
