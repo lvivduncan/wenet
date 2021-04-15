@@ -36,15 +36,18 @@
 #nav-panel .nav-panel{
     color: var(--dark);
     text-decoration: none;
-    transition: .5s;
     display: inline-flex;
     align-items: center;
     margin-left: 10px;
     font-weight: 600;
     cursor: pointer;
-
+    
     position: relative;
     z-index: 3;
+
+    user-select: none;
+
+    transition: color .5s;
 }
 
 #nav-panel a:hover,
@@ -61,6 +64,8 @@
     stroke-linecap: round;
     stroke-linejoin: round;
     margin: 0 0 0 10px;
+
+    transition: stroke .5s;
 }
 
 @media(max-width:776px) {
