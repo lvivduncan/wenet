@@ -138,7 +138,7 @@
     margin: 5px 0 0;
 
     background: var(--gray-lightly);
-    border: 1px solid var(--gray-light);
+    border: 1px solid var(--gray);
     border-radius: 3px;
     outline: none;
 }
