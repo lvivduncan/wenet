@@ -37,7 +37,7 @@ $('.nav-panel').on('click', function(){
 
 
 // зв'язка місто + контакти
-$('.cities li').on('click', function(){
+$('.cities li span').on('click', function(){
     var city = $(this).text();
 
     // міняємо назву міста

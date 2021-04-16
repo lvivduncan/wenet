@@ -113,10 +113,39 @@
 }
 
 /* контент у випадачці */
-#nav-panel .levus-dropdown-content .cities li{
-    margin: 10px 0 10px 10px;
-    cursor: pointer;
+/* city*/
+#nav-panel .levus-dropdown-content .cities{
+    margin: 20px 0;
 }
+
+#nav-panel .levus-dropdown-content .cities li{
+    margin: 30px 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+
+    position: relative;
+}
+
+#nav-panel .levus-dropdown-content .cities li:hover{
+    color: var(--first);
+}
+
+#nav-panel .levus-dropdown-content svg{
+    width: 22px;
+    height: 22px;
+    fill: var(--dark);
+    position: absolute;
+    right: 0;
+    top: -5px;
+}
+
+#nav-panel .levus-dropdown-content .cities li:hover svg{
+    fill: var(--first);
+}
+/* city*/
+
+
 
 #nav-panel .levus-dropdown-content p{
     margin: 0 0 10px;
