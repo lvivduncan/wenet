@@ -6,6 +6,11 @@ $('.levus-dropdown-wrapper').on('click', function(){
     $('.nav-panel').removeClass('open');
     $('.levus-dropdown-content').removeClass('open');
     $(this).removeClass('open');
+
+
+
+    $('#nav').removeClass('open');
+    $('body').removeClass('lock');
 });
 
 $('.nav-panel').on('click', function(){
@@ -26,23 +31,26 @@ $('.nav-panel').on('click', function(){
         $('.levus-dropdown-wrapper').removeClass('open');
     }
 
+    $('#more-link').removeClass('open');
+
 });
 // плагін дропдауна
 
 
 // зв'язка місто + контакти
-$('.cities li').on('click', function(e){
-    var city = e.target.textContent;
+$('.cities li').on('click', function(){
+    var city = $(this).text();
 
     // міняємо назву міста
     $('#city').text(city);
     $('#nav-panel-contacts .levus-dropdown-content h5:first-child').text(city);
 
     // закриваємо випадачку
-    $(this).parents('.levus-dropdown-content').removeClass('open');
+    $('.levus-dropdown').removeClass('open')
+    $('.levus-dropdown-content').removeClass('open')
 
     // відкриваємо випадачку з контактами
-    $('#nav-panel-contacts .levus-dropdown-content').addClass('open');
+    // $('#nav-panel-contacts .levus-dropdown-content').addClass('open');
 
     // перемикаємо телефони
     if(city != 'Борислав'){
@@ -66,14 +74,15 @@ $('.cities li').on('click', function(e){
 });
 // зв'язка місто + контакти
 
-/* 
-$('#nav-panel-city');
 
-$('#nav-panel-cabinet');
+// drop inner ul
+$('#more-link').on('click', function(){
+    $(this).toggleClass('open');
 
-$('#nav-panel-contacts');
- */
-
+    setTimeout(() => {
+        $('#more-link').removeClass('open');
+    }, 3000);
+});
 
 
 // slider home page
@@ -85,4 +94,19 @@ $('#slider .owl-carousel').owlCarousel({
     autoplay: true,
     autoplayTimeout: 3000,
     autoplayHoverPause: true
+});
+
+
+// mobile menu
+$('#menu-button').on('click', function(e){
+    e.preventDefault();
+
+    $(this).toggleClass('open');
+
+   $('#nav').toggleClass('open');
+   $('body').toggleClass('lock');
+
+
+   // tmp
+   $('.levus-dropdown-wrapper').addClass('open');
 });

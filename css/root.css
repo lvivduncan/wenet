@@ -17,6 +17,8 @@
     --red: #b31414;
 
     --black: #1a1a1a;
+    --white: #fffff0;
+    --white-light: #fff;
 
 
 /*     --light: #fffff0;
@@ -54,6 +56,13 @@ body {
     height: 100%;
     font-family: "Montserrat", sans-serif;
     letter-spacing: 0.2px;
+}
+
+body.lock{
+    position: relative;
+    overflow: hidden;
+    width: calc(100% + 8px);
+    left: -8px;
 }
 
 article,
@@ -129,6 +138,17 @@ img{
     background: var(--gray);
 }
 
+/* розпорка */
+.spacer{
+    height: 70px;
+}
+
+@media(max-width:450px){
+    .spacer{
+        height: 55px;
+    }
+}
+
 .wrap {
     width: 1170px;
     margin: auto;
@@ -169,6 +189,7 @@ img{
     bottom: -5px;
 }
 
+/* del? */
 .text-center{
     text-align: center;
 }

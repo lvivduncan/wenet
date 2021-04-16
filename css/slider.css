@@ -12,17 +12,25 @@
 }
 
 /* слайд розділяємо на 2 нерівні частини */
-#slider .item {
+#slider .item{
     cursor               : move;
     display              : grid;
     grid-template-columns: 1fr 2fr;
     align-items          : center;
     grid-gap             : 20px;
     font-size            : 22px;
+    width: 1170px;
+    margin: auto;
+}
+
+@media(max-width:1200px) {
+    #slider .item{
+        width: 95%;
+    }
 }
 
 @media(max-width:776px) {
-    #slider .item {
+    #slider .item{
         grid-template-columns: 1fr;
     }
 }
