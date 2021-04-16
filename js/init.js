@@ -7,8 +7,7 @@ $('.levus-dropdown-wrapper').on('click', function(){
     $('.levus-dropdown-content').removeClass('open');
     $(this).removeClass('open');
 
-
-
+    // mobile
     $('#nav').removeClass('open');
     $('body').removeClass('lock');
 });
@@ -106,7 +105,10 @@ $('#menu-button').on('click', function(e){
    $('#nav').toggleClass('open');
    $('body').toggleClass('lock');
 
-
-   // tmp
+   // wrapper
    $('.levus-dropdown-wrapper').addClass('open');
+
+    // закриваємо випадачку
+    $('.levus-dropdown').removeClass('open')
+    $('.levus-dropdown-content').removeClass('open')
 });
