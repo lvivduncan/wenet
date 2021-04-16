@@ -1,7 +1,7 @@
 
 #footer {
-    background: var(--gray);
-    color: var(--lightgray);
+    background: var(--gray-dark);
+    color: var(--gray-light);
     padding: 40px 0;
 }
 

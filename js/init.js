@@ -2,27 +2,30 @@
 // плагін дропдауна
 $('body').append('<div class="levus-dropdown-wrapper"></div>');
 
-// лічильник кліків
-var cnt = 0;
+$('.levus-dropdown-wrapper').on('click', function(){
+    $('.nav-panel').removeClass('open');
+    $('.levus-dropdown-content').removeClass('open');
+    $(this).removeClass('open');
+});
 
 $('.nav-panel').on('click', function(){
 
     $('.levus-dropdown-content').removeClass('open');
-
-    if(cnt%2 == 0){
-        $(this).next('.levus-dropdown-content').addClass('open');
+    
+    if($(this).hasClass('open')){
+        $(this).removeClass('open');
     } else {
-        $(this).next('.levus-dropdown-content').removeClass('open');
+        $('.nav-panel').removeClass('open');
+        $(this).addClass('open');
+        $(this).next('.levus-dropdown-content').addClass('open');
     }
 
-    $('.levus-dropdown-wrapper').toggleClass('open');
+    if ($('.levus-dropdown-content.open').length > 0) {
+        $('.levus-dropdown-wrapper').addClass('open');
+    } else {
+        $('.levus-dropdown-wrapper').removeClass('open');
+    }
 
-    cnt++;
-});
-
-$('.levus-dropdown-wrapper').on('click', function(){
-    $('.levus-dropdown-content').removeClass('open');
-    $(this).removeClass('open');
 });
 // плагін дропдауна
 

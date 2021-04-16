@@ -1,6 +1,6 @@
 #copy {
-    background: var(--dark);
-    color: var(--lightgray);
+    background: var(--black);
+    color: var(--gray-light);
     padding: 10px 0;
     font-size: 14px;
 }
