@@ -3,6 +3,7 @@
     background: var(--gray-dark);
     color: var(--gray-light);
     padding: 40px 0 0;
+    overflow: hidden;
 }
 
 @media (max-width: 992px) {
