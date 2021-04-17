@@ -10,6 +10,9 @@ $('.levus-dropdown-wrapper').on('click', function(){
     // mobile
     $('#nav').removeClass('open');
     $('body').removeClass('lock');
+
+    // button mobile dafault
+    $('#menu-button').removeClass('open');
 });
 
 $('.nav-panel').on('click', function(){
@@ -109,6 +112,6 @@ $('#menu-button').on('click', function(e){
    $('.levus-dropdown-wrapper').addClass('open');
 
     // закриваємо випадачку
-    $('.levus-dropdown').removeClass('open')
-    $('.levus-dropdown-content').removeClass('open')
+    $('.levus-dropdown').removeClass('open');
+    $('.levus-dropdown-content').removeClass('open');
 });

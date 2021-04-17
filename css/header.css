@@ -89,6 +89,9 @@
     #nav-panel span{
         display: none;
     }
+    #nav-panel .levus-dropdown-content .cities li span{
+        display: flex;
+    }
 }
 
 /* мобільна кнопка */
@@ -125,6 +128,7 @@
     align-items: center;
 
     position: relative;
+    /* display: block */
 }
 
 #nav-panel .levus-dropdown-content .cities li:hover{
