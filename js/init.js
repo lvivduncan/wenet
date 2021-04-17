@@ -2,7 +2,7 @@
 // плагін дропдауна
 $('body').append('<div class="levus-dropdown-wrapper"></div>');
 
-$('.levus-dropdown-wrapper').on('click', function(){
+$('.levus-dropdown-wrapper').on('click', function () {
     $('.nav-panel').removeClass('open');
     $('.levus-dropdown-content').removeClass('open');
     $(this).removeClass('open');
@@ -10,16 +10,13 @@ $('.levus-dropdown-wrapper').on('click', function(){
     // mobile
     $('#nav').removeClass('open');
     $('body').removeClass('lock');
-
-    // button mobile dafault
-    $('#menu-button').removeClass('open');
 });
 
-$('.nav-panel').on('click', function(){
+$('.nav-panel').on('click', function () {
 
     $('.levus-dropdown-content').removeClass('open');
-    
-    if($(this).hasClass('open')){
+
+    if ($(this).hasClass('open')) {
         $(this).removeClass('open');
     } else {
         $('.nav-panel').removeClass('open');
@@ -35,12 +32,15 @@ $('.nav-panel').on('click', function(){
 
     $('#more-link').removeClass('open');
 
+    $('#nav').removeClass('open');
+    $('#menu-button').removeClass('open');
+
 });
 // плагін дропдауна
 
 
 // зв'язка місто + контакти
-$('.cities li span').on('click', function(){
+$('.cities li span').on('click', function () {
     var city = $(this).text();
 
     // міняємо назву міста
@@ -55,11 +55,11 @@ $('.cities li span').on('click', function(){
     // $('#nav-panel-contacts .levus-dropdown-content').addClass('open');
 
     // перемикаємо телефони
-    if(city != 'Борислав'){
+    if (city != 'Борислав') {
         // phones
         $('.levus-dropdown-content .phones').eq(0).removeClass('open');
         $('.levus-dropdown-content .phones').eq(1).addClass('open');
-        
+
         // shedule     
         $('.levus-dropdown-content .shedule').eq(0).removeClass('open');
         $('.levus-dropdown-content .shedule').eq(1).addClass('open');
@@ -78,7 +78,7 @@ $('.cities li span').on('click', function(){
 
 
 // drop inner ul
-$('#more-link').on('click', function(){
+$('#more-link').on('click', function () {
     $(this).toggleClass('open');
 
     setTimeout(() => {
@@ -100,16 +100,13 @@ $('#slider .owl-carousel').owlCarousel({
 
 
 // mobile menu
-$('#menu-button').on('click', function(e){
+$('#menu-button').on('click', function (e) {
     e.preventDefault();
 
     $(this).toggleClass('open');
 
-   $('#nav').toggleClass('open');
-   $('body').toggleClass('lock');
-
-   // wrapper
-   $('.levus-dropdown-wrapper').addClass('open');
+    $('#nav').toggleClass('open');
+    $('body').toggleClass('lock');
 
     // закриваємо випадачку
     $('.levus-dropdown').removeClass('open');
