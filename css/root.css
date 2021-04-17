@@ -124,11 +124,11 @@ a:hover {
 }
 
 img{
-    max-width: 100%;
+    max-width: 100%!important;
     height: auto;
 }
 
-::-moz-selection {
+/* ::-moz-selection {
     color: var(--light);
     background: var(--gray);
 }
@@ -136,7 +136,7 @@ img{
 ::selection {
     color: var(--light);
     background: var(--gray);
-}
+} */
 
 /* розпорка */
 .spacer{
@@ -166,7 +166,7 @@ img{
     text-align: center;
     text-transform: uppercase;
 }
-
+/* 
 .title::before {
     content: "";
     background: url("../images/line-left-white.png") no-repeat;
@@ -189,7 +189,6 @@ img{
     bottom: -5px;
 }
 
-/* del? */
 .text-center{
     text-align: center;
-}
+} */

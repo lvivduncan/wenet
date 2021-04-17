@@ -2,7 +2,7 @@
 #footer {
     background: var(--gray-dark);
     color: var(--gray-light);
-    padding: 40px 0;
+    padding: 40px 0 0;
 }
 
 @media (max-width: 992px) {
@@ -28,8 +28,8 @@
 }
 
 #footer-desc img {
-    max-width: 100% !important;
-    height: auto !important;
+    display: block;
+    margin: auto;
 }
 
 #footer-desc p {
