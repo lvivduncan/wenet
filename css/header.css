@@ -41,6 +41,7 @@
 
 #nav-panel li{
     display: block;
+    margin-left: 10px;
 }
 
 #nav-panel a,
@@ -107,10 +108,10 @@
         text-indent: -9999px;
         width: 24px;
         height: 24px;
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect x='2' y='1' width='18px' height='2px' fill='%23ae5cfe'%3E%3C/rect%3E%3Crect x='2' y='9' width='18px' height='2px' fill='%23ae5cfe'%3E%3C/rect%3E%3Crect x='2' y='17' width='18px' height='2px' fill='%23ae5cfe'%3E%3C/rect%3E%3C/svg%3E");
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cg fill='%23ae5cfe'%3E%3Crect height='2' width='20' y='2' x='2'/%3E%3Crect height='2' width='20' y='11' x='2'/%3E%3Crect height='2' width='20' y='20' x='2'/%3E%3C/g%3E%3C/svg%3E");
     }
     #menu-button.open a{
-        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='none' stroke='%23ae5cfe' stroke-width='2' d='M16,16 L4,4'%3E%3C/path%3E%3Cpath fill='none' stroke='%23ae5cfe' stroke-width='2' d='M16,4 L4,16'%3E%3C/path%3E%3C/svg%3E");
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cg stroke-width='2' fill='none'%3E%3Cpath stroke='%23ae5cfe' d='m22.25,22.125l-20.125,-20.125'/%3E%3Cpath stroke='%23ae5cfe' d='m22.25,1.75l-20.4375,20.4375'/%3E%3C/g%3E%3C/svg%3E");
     }
 
 }
