@@ -6,8 +6,8 @@
 }
 
 :root{
-    --first: #42A5F5;
-    --second: #337AB7;
+    --cyan: #42A5F5;
+    --cyan-dark: #337AB7;
 
     --panel-border: #dbdbdb;
     --panel-hover: #f5f5f5;
@@ -54,12 +54,12 @@
 }
 
 #fares dt a.active{
-    background: var(--first);
+    background: var(--cyan);
     color: var(--light);
 }
 
 #fares dt a:hover{
-    background: var(--second);
+    background: var(--cyan-dark);
     color: var(--light);
     transition: .5s;
 }

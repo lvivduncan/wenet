@@ -61,7 +61,7 @@
 
 #nav-panel a:hover,
 #nav-panel .nav-panel:hover{
-    color: var(--first)
+    color: var(--cyan)
 }
 
 #nav-panel svg{
@@ -83,7 +83,7 @@
 }
 
 #nav-panel .nav-panel:hover svg{
-    stroke: var(--first);
+    stroke: var(--cyan);
 }
 
 @media(max-width:776px) {
@@ -133,7 +133,7 @@
 }
 
 #nav-panel .levus-dropdown-content .cities li:hover{
-    color: var(--first);
+    color: var(--cyan);
 }
 
 #nav-panel .levus-dropdown-content svg{
@@ -146,7 +146,7 @@
 }
 
 #nav-panel .levus-dropdown-content .cities li:hover svg{
-    fill: var(--first);
+    fill: var(--cyan);
 }
 /* city*/
 
@@ -191,7 +191,7 @@
 
 #nav-panel .levus-dropdown-content input[type="text"]:focus,
 #nav-panel .levus-dropdown-content input[type="password"]:focus{
-    border-color: var(--first)
+    border-color: var(--cyan)
 }
 
 #nav-panel .levus-dropdown-content input[type="submit"]{

@@ -34,7 +34,7 @@
 }
 
 #nav li a:hover{
-    color: var(--first);
+    color: var(--cyan);
 }
 
 #nav li svg{

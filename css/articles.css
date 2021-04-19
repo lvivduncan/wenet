@@ -48,7 +48,7 @@
     margin   : 0 0 10px;
     display  : block;
     font-size: 14px;
-    color    : var(--first);
+    color    : var(--cyan);
 }
 
 .post time::before {
@@ -75,7 +75,7 @@
 }
 
 .post h3 a:hover {
-    color: var(--first);
+    color: var(--cyan);
 }
 
 .post p {
@@ -86,7 +86,7 @@
 
 .post .btn {
     padding           : 5px 20px;
-    background        : var(--first);
+    background        : var(--cyan);
     color             : var(--light);
     border-radius     : 10px;
     text-decoration   : none;
@@ -95,5 +95,5 @@
 }
 
 .post .btn:hover {
-    background: var(--second);
+    background: var(--cyan-dark);
 }

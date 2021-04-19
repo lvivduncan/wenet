@@ -2,8 +2,9 @@
 
 :root {
     --purpur: #ae5cfe;
-    --first: #42A5F5;
-    --second: #337AB7;
+    --cyan: #42A5F5;
+    --cyan-dark: #337AB7; /* #0b79d3 */
+    --cyan-light: #f8f8ff;
 
     --gray-lightly: #fcfcfc;
     --gray-light: #f5f5f5;
@@ -55,7 +56,7 @@ html,
 body {
     height: 100%;
     font-family: "Montserrat", sans-serif;
-    letter-spacing: 0.2px;
+    /* letter-spacing: 0.2px; */
 }
 
 body.lock{
@@ -115,7 +116,7 @@ p {
 }
 
 a {
-    color: var(--first);
+    color: var(--cyan);
     text-decoration: underline;
 }
 
@@ -127,16 +128,6 @@ img{
     max-width: 100%!important;
     height: auto;
 }
-
-/* ::-moz-selection {
-    color: var(--light);
-    background: var(--gray);
-}
-
-::selection {
-    color: var(--light);
-    background: var(--gray);
-} */
 
 /* розпорка */
 .spacer{
