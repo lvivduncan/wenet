@@ -1,10 +1,8 @@
 #breadcrumbs {
-    min-height: 230px;
-    /* background: url("../images/breadcrumbs.jpg") fixed; */
+    min-height: 200px;
 }
 
 #breadcrumbs .wrap {
-    /* min-height: 260px; */
     align-items: center;
     justify-content: center;
     flex-flow: column;
@@ -21,7 +19,7 @@
 #breadcrumbs h1 {
     color: var(--white);
     text-align: center;
-    margin: 60px 0;
+    margin: 40px 0;
 }
 
 #breadcrumbs ul {

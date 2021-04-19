@@ -1,7 +1,6 @@
 /* послуги */
 #services{
-    padding: 60px 0;
-    /* background: var(--cyan-light) */
+    padding: 20px 0 60px;
 }
 
 #services .wrap{
