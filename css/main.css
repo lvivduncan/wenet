@@ -3,5 +3,5 @@
     background: var(--cyan-light) url('../temp/bg.jpg') center top no-repeat;
     /* background: linear-gradient(var(--cyan-dark), var(--cyan-light)) no-repeat; */
 /* background: linear-gradient(180deg, var(--cyan-dark) 0%, var(--cyan-light) 35%, var(--white-light) 100%) no-repeat; */
-    background-size: 100% 300px;
+    background-size: 100% 500px;
 }

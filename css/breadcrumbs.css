@@ -1,5 +1,5 @@
 #breadcrumbs {
-    min-height: 170px;
+    /* min-height: 170px; */
 }
 
 #breadcrumbs .wrap {
@@ -41,18 +41,18 @@
 }
 
 #breadcrumbs li:first-child::before {
-    /* color: var(--gray-light); */
-    color: var(--cyan);
+    color: var(--gray-light);
+    /* color: var(--cyan); */
     content: "";
     padding: 0;
 }
 
 #breadcrumbs li.active{
-    /* color: var(--white-light); */
-    color: var(--cyan);
+    color: var(--white-light);
+    /* color: var(--cyan); */
 }
 
 #breadcrumbs li a{
-    /* color: var(--white-light); */
-    color: var(--cyan);
+    color: var(--white-light);
+    /* color: var(--cyan); */
 }
