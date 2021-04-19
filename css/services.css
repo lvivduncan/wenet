@@ -1,8 +1,7 @@
 /* послуги */
 #services{
     padding: 60px 0;
-    background: var(--cyan-light)
-    /* font-family: 'Roboto', sans-serif; */
+    /* background: var(--cyan-light) */
 }
 
 #services .wrap{
@@ -33,15 +32,21 @@
         0 1px 5px 0 rgb(159 193 212 / 22%);
     display: flex;
     flex-flow: column;
+    border-radius: 5px;
 }
 
 #services article h3{
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 400;
     line-height: 26px;
-    padding: 0 0 20px 80px;
-    margin: 0;
     text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+#services article img{
+    width: 22px;
+    margin: 0 10px 0 0;
 }
 
 #services article h3 a{
@@ -49,24 +54,22 @@
     color: var(--cyan-dark)
 }
 
+#services article h3 a:hover{
+    color: var(--cyan);
+}
+
 #services article p{
-    padding: 0 0 20px 80px;
-    margin: 0;
     font-size: 14px;
     line-height: 1.5;
 }
 
-#services article img{
-    width: 50px;
-    position: absolute;
-    bottom: 8px;
-    left: 20px;
-}
 
-#services article span{
+#services .price{
     font-size: 13px;
     color: var(--green-dark);
-    display: block;
-    padding: 0 0 0 80px;
     margin: auto 0 0;
+}
+
+#services .price p{
+    margin: 0;
 }

@@ -1,0 +1,6 @@
+#main{
+    /* background: url('../temp/main.png') center top no-repeat; */
+    /* background: linear-gradient(var(--cyan-dark), var(--cyan-light)) no-repeat; */
+background: linear-gradient(180deg, var(--cyan-dark) 0%, var(--cyan-light) 75%, var(--white-light) 100%) no-repeat;
+    background-size: 100% 400px;
+}

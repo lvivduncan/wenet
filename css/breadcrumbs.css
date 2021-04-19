@@ -1,6 +1,6 @@
 #breadcrumbs {
     min-height: 260px;
-    background: url("../images/breadcrumbs.jpg") fixed;
+    /* background: url("../images/breadcrumbs.jpg") fixed; */
 }
 
 #breadcrumbs .wrap {
@@ -46,5 +46,9 @@
 }
 
 #breadcrumbs li.active{
-    color: var(--gray-light);
+    color: var(--white-light);
+}
+
+#breadcrumbs li a{
+    color: var(--white-light);
 }
