@@ -20,28 +20,6 @@
     --black: #1a1a1a;
     --white: #fffff0;
     --white-light: #fff;
-
-
-/*     --light: #fffff0;
-    --lightly: #f5f5f5;
-    --opaque: rgba(0, 0, 0, 0.15);
-    --lightgray: #999;
-    --gray: #222;
-    --dark: #1a1a1a;
-    --green: #1e8f16;
-    --dark-green: #14740d;
-    --light-green: #76e46e;
-    --red: rgba(179, 20, 20, 1);
-    --light-red: #ff9d9d;
-    --purpur: rgb(143, 4, 219);
-    --gold: #b39906;
-    --tv-bg: rgba(66, 165, 245, 0.1);
-    --tv-bg-2: #ebebeb;
-    --tv-bg-3: rgba(66, 165, 245, 0.5);
-    --tv-border: rgba(66, 165, 245, 1);
-    --panel: rgba(250, 250, 250, .5);
-    --panel-border: #dbdbdb;
-    --panel-hover: #f5f5f5; */
 }
 
 *,
@@ -56,7 +34,6 @@ html,
 body {
     height: 100%;
     font-family: "Montserrat", sans-serif;
-    /* letter-spacing: 0.2px; */
 }
 
 body.lock{
@@ -157,29 +134,3 @@ img{
     text-align: center;
     text-transform: uppercase;
 }
-/* 
-.title::before {
-    content: "";
-    background: url("../images/line-left-white.png") no-repeat;
-    width: 90px;
-    height: 25px;
-    display: inline-block;
-    margin-right: 30px;
-    position: relative;
-    bottom: -5px;
-}
-
-.title::after {
-    content: "";
-    background: url("../images/line-right-white.png") no-repeat;
-    width: 90px;
-    height: 25px;
-    display: inline-block;
-    margin-left: 30px;
-    position: relative;
-    bottom: -5px;
-}
-
-.text-center{
-    text-align: center;
-} */
