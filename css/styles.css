@@ -20,6 +20,9 @@
 
 /* @import url('./breadcrumbs.css'); */
 
+@import url('./page.css');
+
+
 @import url('./articles.css');
 
 @import url('./footer.css');

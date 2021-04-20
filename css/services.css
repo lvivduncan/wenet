@@ -1,9 +1,6 @@
 /* послуги */
 #services{
     padding: 20px 0 60px;
-
-    background: var(--white-light) url('../temp/bg.jpg') center top no-repeat;
-    background-size: 100% 100%;
     box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 20%);
 }
 
