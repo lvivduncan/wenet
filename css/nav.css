@@ -5,8 +5,7 @@
     align-items: center;
     background: var(--gray-light);
     height: 70px;
-    box-shadow: 
-        0 0 5px 0 rgb(0 0 0 / 20%);
+    /* box-shadow:  0 0 5px 0 rgb(0 0 0 / 20%); */
     /* margin-top: 2px; */
 }
 

@@ -3,6 +3,13 @@
     padding: 20px 0 60px;
 }
 
+/* заголовок */
+#services h1{
+    margin: 20px 0 40px;
+    text-align: center;
+    color: var(--black);
+}
+
 #services .wrap{
     display: grid;
     grid-template-columns: repeat(3,1fr);
@@ -32,6 +39,7 @@
     display: flex;
     flex-flow: column;
     border-radius: 5px;
+    border: 1px solid var(--gray);
 }
 
 #services article h3{
