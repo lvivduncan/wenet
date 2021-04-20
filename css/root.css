@@ -1,4 +1,11 @@
 
+*,
+::after,
+::before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
 
 :root {
     --purpur: #ae5cfe;
@@ -20,14 +27,6 @@
     --black: #1a1a1a;
     --white: #fffff0;
     --white-light: #fff;
-}
-
-*,
-::after,
-::before {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
 }
 
 html,
