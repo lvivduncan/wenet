@@ -29,6 +29,7 @@
 #page time{
     display: block;
     margin: 0 0 30px;
+    font-weight: 500;
 }
 
 #page p{
