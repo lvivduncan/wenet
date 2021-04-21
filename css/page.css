@@ -13,11 +13,17 @@
 #page .wrap{
     flex-flow: column;
     background: var(--white-light);
-    padding: 30px;
+    padding: 60px;
 
     box-shadow: 0 3px 1px -2px rgb(159 193 212 / 30%), 0 2px 2px 0 rgb(159 193 212 / 24%), 0 1px 5px 0 rgb(159 193 212 / 22%);
     border-radius: 5px;
     border: 1px solid var(--gray);
+}
+
+@media(max-width:776px) {
+    #page .wrap{
+        padding: 30px;
+    }
 }
 
 #page time{
@@ -28,4 +34,26 @@
 #page p{
     line-height: 1.5;
     margin: 0 0 30px;
+}
+
+#page img{
+    margin: 0 0 30px;
+}
+
+/* шаринг */
+.share-facebook svg,
+.share-twitter svg,
+.share-linkedin svg,
+.share-telegram svg,
+.share-viber svg{
+    transition: .5s;
+    transform: translateY(0);
+}
+
+.share-facebook:hover svg,
+.share-twitter:hover svg,
+.share-linkedin:hover svg,
+.share-telegram:hover svg,
+.share-viber:hover svg{
+    transform: translateY(-5px);
 }
