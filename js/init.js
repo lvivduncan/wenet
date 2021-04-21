@@ -112,3 +112,22 @@ $('#menu-button').on('click', function (e) {
     $('.levus-dropdown').removeClass('open');
     $('.levus-dropdown-content').removeClass('open');
 });
+
+
+// вкладки у тарифах
+$('#rate dt span').on('click', function(){
+
+    var cnt = $(this).index();
+
+    // підсвічуємо активний, вимикаємо неактивні
+    $(this).addClass('active').siblings().removeClass('active');
+
+    // так само
+    $('#rate dd > div').removeClass('active').eq(cnt).addClass('active');
+
+});
+
+
+
+
+//
