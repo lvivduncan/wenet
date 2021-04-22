@@ -169,18 +169,34 @@
 .tariff .params{
     display: flex;
     align-items: center;
-    justify-content: center;
-    flex-flow: column;
+    /* justify-content: center; */
+    justify-content: space-evenly;
+    /* flex-flow: column; */
     padding: 20px 0 0;
     border-top: 1px solid var(--gray-light);
-    text-align: center;
+    /* text-align: center; */
+    position: relative;
+}
+
+.tariff .params::after{
+    content: '+';
+    position: absolute;
+    top: calc(50% - 10px);
+    left: calc(50% - 10px);
+    display: block;
+    font-size: 40px;
+    line-height: 0.7;
+    /* width: 20px; */
+    /* height: 20px; */
 }
 
 .tariff .speed,
 .tariff .tv{
     display: flex;
-    align-items: flex-end;
+    /* align-items: flex-end; */
+    align-items: center;
     justify-content: center;
+    flex-flow: column;
     margin-bottom: 12px;
 }
 
@@ -188,7 +204,7 @@
 .tariff .tv strong{
     font-size: 28px;
     font-weight: 600;
-    line-height: 1;
+    /* line-height: 1; */
     padding: 0 10px;
 }
 
