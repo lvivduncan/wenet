@@ -137,7 +137,8 @@ $('.tariff .options').height(optionsHeight);
 var priceHeight = $('.tariff .price').eq(0).height();
 $('.tariff .price').height(priceHeight);
 
-
+var paramsHeight = $('.tariff .params').eq(0).height();
+$('.tariff .params').height(paramsHeight);
 
 
 
