@@ -4,6 +4,7 @@
     padding: 20px 0 60px;
     box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 20%);
     position: relative;
+    min-height: 400px;
 }
 
 #rate::after{
@@ -35,16 +36,11 @@
     margin: 20px 0 40px;
     text-align: center;
     color: var(--black);
+    line-height: 1.3;
 }
 
 #rate .wrap{
     flex-flow: column;
-    /* background: var(--white-light); */
-    /* padding: 30px; */
-    /* border-radius: 5px; */
-
-    /* box-shadow: 0 3px 1px -2px rgb(159 193 212 / 30%), 0 2px 2px 0 rgb(159 193 212 / 24%), 0 1px 5px 0 rgb(159 193 212 / 22%); */
-    /* border: 1px solid var(--gray); */
 }
 
 /* обгортка */
@@ -67,7 +63,6 @@
     align-items: center;
     justify-content: center;
     padding: 6px 10px;
-    /* background: var(--gray-light); */
     background: var(--white-light);
     color: var(--black);
     margin: 0 5px 5px;
@@ -76,6 +71,12 @@
     border-radius: 5px;
     cursor: pointer;
     box-shadow: 0 3px 1px -2px rgb(159 193 212 / 30%), 0 2px 2px 0 rgb(159 193 212 / 24%), 0 1px 5px 0 rgb(159 193 212 / 22%);
+    transition: .5s
+}
+
+#rate dt span:hover{
+    background: var(--cyan-dark);
+    color: var(--white-light);
 }
 
 /* активний */
@@ -88,6 +89,11 @@
     width: 16px;
     height: 16px;
     margin-right: 5px;
+    transition: .5s;
+}
+
+#rate dt span:hover svg{
+    fill: var(--white-light);
 }
 
 /* активний */
@@ -129,10 +135,171 @@
     padding: 30px;
     border-radius: 5px;
     position: relative;
+    overflow: hidden;
+}
+
+@media(max-width:776px) {
+    .tariff{
+        padding: 30px 10px;
+    }    
+}
+
+@media(max-width:450px) {
+    .tariff{
+        padding: 30px;
+    }    
 }
 
 .tariff .marker{
     position: absolute;
     top: 0;
     left: 0;
+    padding: 10px;
+    /* background: var(--purpur); */
+    background: var(--red);
+    color: var(--white-light);
+    font-weight: 500;
+    transform: rotate(-45deg) translate(-33px, -45px);
+    width: 150px;
+    text-align: center;
+    height: 60px;
+    padding-top: 27px;
+    text-transform: uppercase;
 }
+
+/* назва тарифа */
+.tariff h1{
+    font-weight: 600;
+    position: relative;
+}
+
+.tariff h1::after{
+    content: '';
+    width: 100px;
+    height: 2px;
+    display: inline-block;
+    background: var(--gray);
+    left: calc(50% - 50px);
+    bottom: -15px;
+    position: absolute;
+}
+
+.tariff .params{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.tariff .speed,
+.tariff .tv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+}
+
+.tariff .speed strong,
+.tariff .tv strong{
+    font-size: 44px;
+    line-height: 1;
+}
+
+/* колір швидкості */
+.tariff .speed strong{
+    color: var(--red)
+}
+
+/* колір каналів */
+.tariff .tv strong{
+    color: var(--purpur)
+}
+
+/* блок з додатковими опціями */
+.tariff .options{
+    margin: 30px -30px;
+    padding: 10px 30px;
+    background: var(--cyan-light);
+    min-height: 210px;
+}
+
+.tariff .options ul{
+    margin: 20px 0;
+}
+
+.tariff .options ul li{
+    display: flex;
+    align-items: center;
+    margin: 3px 0;
+}
+
+/* bonus */
+.tariff .options ul.bonus li{
+    font-weight: 600;
+}
+
+.tariff .options ul li::before{
+    content: '';
+    display: inline-block;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23222222' stroke-width='3' stroke-linecap='round' stroke-linejoin='round' class='feather feather-check'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E");
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+}
+
+/* bonus */
+.tariff .options ul.bonus li::before{
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23222222' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cline x1='12' y1='5' x2='12' y2='19'%3E%3C/line%3E%3Cline x1='5' y1='12' x2='19' y2='12'%3E%3C/line%3E%3C/svg%3E");
+}
+
+/* вартість */
+.tariff .price{
+    margin: 30px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    min-height: 92px;
+}
+
+.tariff .price strong{
+    font-size: 44px;
+    line-height: 1;
+}
+
+/* кнопка "детально" */
+.tariff .view{
+    margin: 30px 0 10px;
+}
+
+.tariff .view a{
+    display: inline-block;
+    padding: 5px;
+    width: 100%;
+    background: var(--gray-light);
+    border: 1px solid var(--gray);
+    color: var(--gray-dark);
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    transition: .5s;
+}
+
+.tariff .view a:hover{
+    background: var(--gray);
+}
+
+/* примітка */
+.tariff .note{
+    font-size: 13px;
+}
+
+
+
+
+
+
+
+
+
+/**/

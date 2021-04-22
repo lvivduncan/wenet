@@ -1,3 +1,5 @@
+// start
+
 
 // плагін дропдауна
 $('body').append('<div class="levus-dropdown-wrapper"></div>');
@@ -34,6 +36,7 @@ $('.nav-panel').on('click', function () {
 
     $('#nav').removeClass('open');
     $('#menu-button').removeClass('open');
+    $('body').removeClass('lock');
 
 });
 // плагін дропдауна
@@ -50,9 +53,6 @@ $('.cities li span').on('click', function () {
     // закриваємо випадачку
     $('.levus-dropdown').removeClass('open')
     $('.levus-dropdown-content').removeClass('open')
-
-    // відкриваємо випадачку з контактами
-    // $('#nav-panel-contacts .levus-dropdown-content').addClass('open');
 
     // перемикаємо телефони
     if (city != 'Борислав') {
@@ -73,10 +73,12 @@ $('.cities li span').on('click', function () {
         $('.levus-dropdown-content .shedule').eq(1).removeClass('open');
     }
 
+    // todo: додати локал-сторедж з обраним містом
+
 });
 // зв'язка місто + контакти
 
-
+/* 
 // drop inner ul
 $('#more-link').on('click', function () {
     $(this).toggleClass('open');
@@ -85,7 +87,7 @@ $('#more-link').on('click', function () {
         $('#more-link').removeClass('open');
     }, 3000);
 });
-
+ */
 
 // slider home page
 $('#slider .owl-carousel').owlCarousel({
@@ -127,7 +129,16 @@ $('#rate dt span').on('click', function(){
 
 });
 
+// вирівнювання блоків у тарифі -- за найбільшим (за 1 тарифом, бо він буде скоріше за все і найдовшим)
+var optionsHeight = $('.tariff .options').eq(0).height();
+$('.tariff .options').height(optionsHeight);
+
+// блок ціни 
+var priceHeight = $('.tariff .price').eq(0).height();
+$('.tariff .price').height(priceHeight);
 
 
 
-//
+
+
+// end

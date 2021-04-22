@@ -10,7 +10,7 @@
 :root {
     --purpur: #ae5cfe;
     --cyan: #42A5F5;
-    --cyan-dark: #337AB7; /* #0b79d3 */
+    --cyan-dark: #337AB7;
     --cyan-light: #f8f8ff;
 
     --gray-lightly: #fcfcfc;
@@ -34,6 +34,7 @@ body {
     height: 100%;
     font-family: "Montserrat", sans-serif;
     line-height: 1.5;
+    color: var(--gray-dark);
 }
 
 body.lock{
