@@ -230,65 +230,69 @@
     display: block;
     height: 20px;
     width: 100%;
-    background: var(--green-light);
     border: 1px solid var(--gray);
+    
+    position: relative;
+}
+
+.tariff .progressbar span::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: block;
+    background: var(--green-light);
+    
     opacity: 0;
-
     animation: progress .5s forwards;
-    animation-delay: calc(.1s * var(--i));
+    animation-delay: calc(.1s * var(--i));    
+
 }
 
-.tariff .progressbar span.white{
-    background: var(--white-light);
-}
+/* ///////////////
+заповнення стрічки 
+/////////////// */
 
-/* заповнення стрічки */
-.tariff .progressbar.percent100{
-    /* default */
-}
-
-.tariff .progressbar.percent75{}
-
-.tariff .progressbar.percent75 span:nth-child(8){
+/* 8 елемент має градієнт */
+.tariff .progressbar.percent75 span:nth-child(8)::before{
     background: linear-gradient(-90deg, var(--white-light) 0%, var(--green-light) 100%);
 }
 
-.tariff .progressbar.percent75 span:nth-child(9),
-.tariff .progressbar.percent75 span:nth-child(10){
+.tariff .progressbar.percent75 span:nth-child(9)::before,
+.tariff .progressbar.percent75 span:nth-child(10)::before{
     background: var(--white-light);
 }
 
-.tariff .progressbar.percent50{}
-
-.tariff .progressbar.percent50 span:nth-child(5){
+/* 6 елемент має градієнт */
+.tariff .progressbar.percent50 span:nth-child(6)::before{
     background: linear-gradient(-90deg, var(--white-light) 0%, var(--green-light) 100%);
 }
 
-.tariff .progressbar.percent50 span:nth-child(6),
-.tariff .progressbar.percent50 span:nth-child(7),
-.tariff .progressbar.percent50 span:nth-child(8),
-.tariff .progressbar.percent50 span:nth-child(9),
-.tariff .progressbar.percent50 span:nth-child(10){
+.tariff .progressbar.percent50 span:nth-child(7)::before,
+.tariff .progressbar.percent50 span:nth-child(8)::before,
+.tariff .progressbar.percent50 span:nth-child(9)::before,
+.tariff .progressbar.percent50 span:nth-child(10)::before{
     background: var(--white-light);
 }
 
-
-.tariff .progressbar.percent25{}
-
-.tariff .progressbar.percent25 span:nth-child(2){
+/* 3 елемент має градієнт */
+.tariff .progressbar.percent25 span:nth-child(3)::before{
     background: linear-gradient(-90deg, var(--white-light) 0%, var(--green-light) 100%);
 }
 
-.tariff .progressbar.percent25 span:nth-child(3),
-.tariff .progressbar.percent25 span:nth-child(4),
-.tariff .progressbar.percent25 span:nth-child(5),
-.tariff .progressbar.percent25 span:nth-child(6),
-.tariff .progressbar.percent25 span:nth-child(7),
-.tariff .progressbar.percent25 span:nth-child(8),
-.tariff .progressbar.percent25 span:nth-child(9),
-.tariff .progressbar.percent25 span:nth-child(10){
+.tariff .progressbar.percent25 span:nth-child(4)::before,
+.tariff .progressbar.percent25 span:nth-child(5)::before,
+.tariff .progressbar.percent25 span:nth-child(6)::before,
+.tariff .progressbar.percent25 span:nth-child(7)::before,
+.tariff .progressbar.percent25 span:nth-child(8)::before,
+.tariff .progressbar.percent25 span:nth-child(9)::before,
+.tariff .progressbar.percent25 span:nth-child(10)::before{
     background: var(--white-light);
 }
+
+
 
 
 
