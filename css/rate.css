@@ -173,16 +173,28 @@
     padding: 5px 0 0;
     border-top: 1px solid var(--gray-light);
     position: relative;
+
+    flex-flow: row-reverse;
 }
 
-.tariff .speed,
+/* швидкість */
+.tariff .speed{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* у стовпчик, якщо поруч є канали */
+.tariff .tv ~ .speed{
+    flex-flow: column;
+}
+
+/* кількість каналів */
 .tariff .tv{
     display: flex;
-    /* align-items: flex-end; */
     align-items: center;
     justify-content: center;
     flex-flow: column;
-    margin-bottom: 12px;
 }
 
 .tariff .speed strong,
