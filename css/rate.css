@@ -25,6 +25,7 @@
     text-align: center;
     color: var(--black);
     line-height: 1.3;
+    font-size: 28px;
 }
 
 #rate .wrap{
