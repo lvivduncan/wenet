@@ -178,7 +178,7 @@
     position: relative;
 }
 
-.tariff .params::after{
+/* .tariff .params::after{
     content: '+';
     position: absolute;
     top: calc(50% - 10px);
@@ -186,9 +186,7 @@
     display: block;
     font-size: 40px;
     line-height: 0.7;
-    /* width: 20px; */
-    /* height: 20px; */
-}
+} */
 
 .tariff .speed,
 .tariff .tv{
@@ -207,6 +205,92 @@
     /* line-height: 1; */
     padding: 0 10px;
 }
+
+.tariff .tv::before{
+    content: '+';
+    position: absolute;
+    top: calc(50% - 10px);
+    left: calc(50% - 10px);
+    display: block;
+    font-size: 40px;
+    line-height: 0.7;
+}
+
+/* кубики */
+.tariff .progressbar{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2px;
+    margin-top: 20px;
+}
+
+.tariff .progressbar span{
+    display: block;
+    height: 20px;
+    width: 100%;
+    background: var(--green-light);
+    border: 1px solid var(--gray);
+    opacity: 0;
+
+    animation: progress .5s forwards;
+    animation-delay: calc(.1s * var(--i));
+}
+
+.tariff .progressbar span.white{
+    background: var(--white-light);
+}
+
+/* заповнення стрічки */
+.tariff .progressbar.percent100{
+    /* default */
+}
+
+.tariff .progressbar.percent75{}
+
+.tariff .progressbar.percent75 span:nth-child(8){
+    background: linear-gradient(-90deg, var(--white-light) 0%, var(--green-light) 100%);
+}
+
+.tariff .progressbar.percent75 span:nth-child(9),
+.tariff .progressbar.percent75 span:nth-child(10){
+    background: var(--white-light);
+}
+
+.tariff .progressbar.percent50{}
+
+.tariff .progressbar.percent50 span:nth-child(5){
+    background: linear-gradient(-90deg, var(--white-light) 0%, var(--green-light) 100%);
+}
+
+.tariff .progressbar.percent50 span:nth-child(6),
+.tariff .progressbar.percent50 span:nth-child(7),
+.tariff .progressbar.percent50 span:nth-child(8),
+.tariff .progressbar.percent50 span:nth-child(9),
+.tariff .progressbar.percent50 span:nth-child(10){
+    background: var(--white-light);
+}
+
+
+.tariff .progressbar.percent25{}
+
+.tariff .progressbar.percent25 span:nth-child(2){
+    background: linear-gradient(-90deg, var(--white-light) 0%, var(--green-light) 100%);
+}
+
+.tariff .progressbar.percent25 span:nth-child(3),
+.tariff .progressbar.percent25 span:nth-child(4),
+.tariff .progressbar.percent25 span:nth-child(5),
+.tariff .progressbar.percent25 span:nth-child(6),
+.tariff .progressbar.percent25 span:nth-child(7),
+.tariff .progressbar.percent25 span:nth-child(8),
+.tariff .progressbar.percent25 span:nth-child(9),
+.tariff .progressbar.percent25 span:nth-child(10){
+    background: var(--white-light);
+}
+
+
 
 /* блок з додатковими опціями */
 .tariff .options{
