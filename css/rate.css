@@ -159,7 +159,7 @@
 
 /* назва тарифа */
 .tariff h1{
-    font-weight: 600;
+    font-weight: 700;
     font-size: 28px!important;
     position: relative;
     color: var(--cyan)!important;
@@ -200,7 +200,7 @@
 .tariff .speed strong,
 .tariff .tv strong{
     font-size: 28px;
-    font-weight: 600;
+    font-weight: 700;
     line-height: 1.2;
     padding: 0 10px;
 }
@@ -293,7 +293,7 @@
 
 .tariff .price strong{
     font-size: 28px;
-    font-weight: 600;
+    font-weight: 700;
     line-height: 1;
 }
 
