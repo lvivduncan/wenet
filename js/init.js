@@ -1,6 +1,5 @@
 // start
 
-
 // плагін дропдауна
 $('body').append('<div class="levus-dropdown-wrapper"></div>');
 

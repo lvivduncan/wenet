@@ -5,8 +5,6 @@
     align-items: center;
     background: var(--gray-light);
     height: 70px;
-    /* box-shadow:  0 0 5px 0 rgb(0 0 0 / 20%); */
-    /* margin-top: 2px; */
 }
 
 #nav .wrap{
@@ -48,7 +46,6 @@
     margin: 0 0 0 10px;
 }
 
-
 /* прихований блок */
 #more-link{
     position: relative;
@@ -84,7 +81,6 @@
     display: block;
     padding: 10px 0;
 }
-
 
 /* mobile menu */
 @media(max-width: 776px) {    
