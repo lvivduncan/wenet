@@ -216,7 +216,12 @@
     line-height: 0.7;
 }
 
-/* кубики */
+
+
+
+/* ///
+кубики
+/// */
 .tariff .progressbar{
     position: relative;
     display: flex;
@@ -231,7 +236,6 @@
     height: 20px;
     width: 100%;
     border: 1px solid var(--gray);
-    
     position: relative;
 }
 
@@ -243,43 +247,26 @@
     bottom: 0;
     right: 0;
     display: block;
-    background: var(--green-light);
-    
-    opacity: 0;
-    animation: progress .5s forwards;
-    animation-delay: calc(.1s * var(--i));    
 
+    animation: progress .1s calc(.15s * var(--i)) forwards;
 }
 
-/* ///////////////
-заповнення стрічки 
-/////////////// */
-
-/* 8 елемент має градієнт */
-.tariff .progressbar.percent75 span:nth-child(8)::before{
-    background: linear-gradient(-90deg, var(--white-light) 0%, var(--green-light) 100%);
-}
-
+.tariff .progressbar.percent75 span:nth-child(8)::before,
 .tariff .progressbar.percent75 span:nth-child(9)::before,
 .tariff .progressbar.percent75 span:nth-child(10)::before{
-    background: var(--white-light);
+    animation: 
+        progress .1s calc(.15s * var(--i)) forwards, 
+        progress-reverse .1s calc(.15s * var(--k)) forwards;
 }
 
-/* 6 елемент має градієнт */
-.tariff .progressbar.percent50 span:nth-child(6)::before{
-    background: linear-gradient(-90deg, var(--white-light) 0%, var(--green-light) 100%);
-}
-
+.tariff .progressbar.percent50 span:nth-child(6)::before,
 .tariff .progressbar.percent50 span:nth-child(7)::before,
 .tariff .progressbar.percent50 span:nth-child(8)::before,
 .tariff .progressbar.percent50 span:nth-child(9)::before,
 .tariff .progressbar.percent50 span:nth-child(10)::before{
-    background: var(--white-light);
-}
-
-/* 3 елемент має градієнт */
-.tariff .progressbar.percent25 span:nth-child(3)::before{
-    background: linear-gradient(-90deg, var(--white-light) 0%, var(--green-light) 100%);
+    animation: 
+        progress .1s calc(.15s * var(--i)) forwards, 
+        progress-reverse .1s calc(.15s * var(--k)) forwards;
 }
 
 .tariff .progressbar.percent25 span:nth-child(4)::before,
@@ -289,7 +276,9 @@
 .tariff .progressbar.percent25 span:nth-child(8)::before,
 .tariff .progressbar.percent25 span:nth-child(9)::before,
 .tariff .progressbar.percent25 span:nth-child(10)::before{
-    background: var(--white-light);
+    animation: 
+        progress .1s calc(.15s * var(--i)) forwards, 
+        progress-reverse .1s calc(.15s * var(--k)) forwards;
 }
 
 
