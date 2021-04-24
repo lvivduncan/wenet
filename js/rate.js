@@ -1,4 +1,6 @@
 
+
+// del?
 // зміна ціни on/off checkbox
 $('.rate-checked input').on('change', function(){
     

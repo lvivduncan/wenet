@@ -1,12 +1,12 @@
 /* тарифи */
-#rate{
+#rates{
     padding: 20px 0 60px;
     box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 20%);
     position: relative;
     min-height: 400px;
 }
 
-#rate::after{
+#rates::after{
     content: '';
     display: inline-block;
     width: 100%;
@@ -21,7 +21,7 @@
     background-size: 100% 100%;
 }
 
-#rate h1 {
+#rates h1 {
     margin: 20px 0 40px;
     text-align: center;
     color: var(--black);
@@ -29,25 +29,25 @@
     font-size: 28px;
 }
 
-#rate .wrap{
+#rates .wrap{
     flex-flow: column;
 }
 
 /* обгортка */
-#rate dl{
+#rates dl{
     position: relative;
     z-index: 1;
 }
 
 /* кнопки */
-#rate dt{
+#rates dt{
     display: flex;
     margin: 0 0 20px;
     justify-content: center;
     flex-wrap: wrap;
 }
 
-#rate dt span{
+#rates dt span{
     font-size: 14px;
     display: flex;
     align-items: center;
@@ -64,58 +64,58 @@
     transition: .5s
 }
 
-#rate dt span:hover{
+#rates dt span:hover{
     background: var(--cyan-dark);
     color: var(--white-light);
 }
 
 /* активний */
-#rate dt span.active{
+#rates dt span.active{
     background: var(--cyan);
     color: var(--white-light)
 }
 
-#rate dt span svg{
+#rates dt span svg{
     width: 16px;
     height: 16px;
     margin-right: 5px;
     transition: .5s;
 }
 
-#rate dt span:hover svg{
+#rates dt span:hover svg{
     fill: var(--white-light);
 }
 
 /* активний */
-#rate dt span.active svg{
+#rates dt span.active svg{
     fill: var(--white-light)
 }
 
-#rate dd > div{
+#rates dd > div{
     display: none;
 }
 
-#rate dd > div.active{
+#rates dd > div.active{
     display: grid;
     grid-template-columns: repeat(3,1fr);
     grid-gap: 20px;
 }
 
 @media(max-width: 996px) {
-    #rate dd > div.active{
+    #rates dd > div.active{
         grid-template-columns: repeat(2,340px);
         justify-content: center;
     }   
 }
 
 @media(max-width: 776px) {
-    #rate dd > div.active{
+    #rates dd > div.active{
         grid-template-columns: 340px;
     }   
 }
 
 @media(max-width: 450px) {
-    #rate dd > div.active{
+    #rates dd > div.active{
         grid-template-columns: 290px;
     }   
 }

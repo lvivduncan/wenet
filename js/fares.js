@@ -1,4 +1,5 @@
 
+// del?
 // клік на групу тарифів
 $('#fares dt a').on('click',function(e){
     e.preventDefault();

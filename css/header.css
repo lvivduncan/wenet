@@ -172,7 +172,7 @@
 #nav-panel .levus-dropdown-content label{
     cursor: pointer;
 }
-
+/* 
 #nav-panel .levus-dropdown-content input[type="text"],
 #nav-panel .levus-dropdown-content input[type="password"]{
     display: block;
@@ -207,7 +207,7 @@
 
 #nav-panel .levus-dropdown-content input[type="submit"]:hover{
     background: var(--gray);
-}
+} */
 
 #nav-panel .levus-dropdown-content a{
     font-size: 12px;

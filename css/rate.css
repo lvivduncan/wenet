@@ -1,11 +1,11 @@
 /* сторінка окремого тарифа */
-#single-rate{
+#rate{
     padding: 20px 0 60px;
     box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 20%);
     position: relative;
 }
 
-#single-rate::after{
+#rate::after{
     content: '';
     display: inline-block;
     width: 100%;
@@ -21,29 +21,61 @@
 }
 
 /* заголовок */
-#single-rate h1{
-    margin: 20px 0 40px;
+#rate h1{
+    margin: 20px 0 0;
     text-align: center;
     color: var(--black);
     font-size: 28px;
 }
 
-#single-rate .wrap{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-gap: 30px;
-    margin-top: 40px;
+/* підпис під заголовком */
+#rate > p{
+    margin: 0 0 40px;
+    text-align: center;
+}
+
+#rate .wrap{
+    /* display: grid; */
+    /* grid-template-columns: repeat(3,1fr); */
+    /* grid-gap: 30px; */
+    /* margin-top: 40px; */
 }
 
 @media(max-width:996px){
-    #single-rate .wrap{
-        grid-template-columns: repeat(2,1fr);
-        background-attachment: fixed;
+    #rate .wrap{
+        /* grid-template-columns: repeat(2,1fr); */
+        /* background-attachment: fixed; */
     }
 }
 
 @media(max-width:650px){
-    #single-rate .wrap{
-        grid-template-columns: 1fr;
+    #rate .wrap{
+        /* grid-template-columns: 1fr; */
     }
+}
+
+/* //////////// 
+1 блок -- форма
+//////////// */
+#rate-form{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 10px 30px;
+    align-items: center;
+    justify-content: center;
+    width: 100%
+}
+
+#rate-form p{
+    text-align: center;
+    font-size: 14px;
+}
+
+#rate-form strong{
+    display: block;
+    color: var(--cyan);
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1;
+    margin: 0 0 10px;
 }
