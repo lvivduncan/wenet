@@ -8,7 +8,7 @@
 
 @import url('./levus-dropdown.css');
 
-@import url('./breadcrumbs.css');
+/* @import url('./breadcrumbs.css'); */
 
 @import url('./services.css');
 
@@ -20,6 +20,8 @@
 
 @import url('./page.css');
 
+@import url('./rates.css');
+
 @import url('./rate.css');
 
 @import url('./articles.css');
@@ -29,3 +31,5 @@
 @import url('./copy.css');
 
 @import url('./keyframes.css');
+
+/* todo: chat */
