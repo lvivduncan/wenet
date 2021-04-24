@@ -141,4 +141,57 @@ $('.tariff .params').height(paramsHeight);
 
 
 
+// чекбокси у тарифі
+
+$('.select-single input[type=checkbox]').on('change', function () {
+
+    let group = $(this).closest('.select-single');
+
+    $('input[type=checkbox]', group).removeClass('selected-item');
+
+    $(this).addClass('selected-item');
+    $('input[type=checkbox]:not(.selected-item)', group).prop('checked', false);
+
+    $('input[type=checkbox]', group).removeClass('disabled');
+
+    if ($('input[type=checkbox]:checked', group).length > 0)
+        $('input[type=checkbox]:not(:checked)', group).addClass('disabled');
+
+    if ($(this).is(':checked') && $(this).is('.disabled'))
+    {
+        $(this).prop('checked', false);
+    }
+
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // end

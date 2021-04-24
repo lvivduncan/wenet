@@ -15,7 +15,7 @@
     left: 0;
     z-index: -1;
     /* фон має бути вставлений з адмінки */
-    background-image: url(../temp/bg2.jpg);
+    /* background-image: url(../temp/bg2.jpg); */
     background-position: center top;
     background-size: 100% 100%;
 }
@@ -35,23 +35,7 @@
 }
 
 #rate .wrap{
-    /* display: grid; */
-    /* grid-template-columns: repeat(3,1fr); */
-    /* grid-gap: 30px; */
-    /* margin-top: 40px; */
-}
-
-@media(max-width:996px){
-    #rate .wrap{
-        /* grid-template-columns: repeat(2,1fr); */
-        /* background-attachment: fixed; */
-    }
-}
-
-@media(max-width:650px){
-    #rate .wrap{
-        /* grid-template-columns: 1fr; */
-    }
+    flex-flow: column;
 }
 
 /* //////////// 
@@ -66,6 +50,18 @@
     width: 100%
 }
 
+@media(max-width: 776px) {
+    #rate-form{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media(max-width: 400px) {
+    #rate-form{
+        grid-template-columns: 1fr;
+    }
+}
+
 #rate-form p{
     text-align: center;
     font-size: 14px;
@@ -77,5 +73,115 @@
     font-size: 24px;
     font-weight: 400;
     line-height: 1;
-    margin: 0 0 10px;
+    margin: 0 0 5px;
+}
+
+#rate-form span{
+    font-weight: 600;
+
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 1px;
+    white-space: nowrap;
+}
+
+/* //////////////////
+пропозиції та додатки 
+////////////////// */
+#rate-adds{
+    display: flex;
+    margin: 30px 0
+}
+
+@media(max-width: 776px) {
+    #rate-adds{
+        display: block;
+    }
+}
+
+#rate-adds aside{
+    flex: 1;
+    border-left: 1px solid var(--black-light);
+}
+
+@media(max-width:776px) {
+    #rate-adds aside{
+        /* flex: 1; */
+        border: none;
+    }   
+}
+
+#rate-adds aside:first-child{
+    border: none;
+}
+
+/* заголовок блоку */
+#rate h4{
+    text-align: center;
+}
+
+@media(max-width:776px) {
+    #rate h4{
+        margin: 20px 0;
+    }
+}
+
+#rate-adds article{
+    display: grid;
+    grid-template-columns: 60px auto 60px;
+    grid-gap: 10px;
+    align-items: center;
+    padding: 0 10px;
+}
+
+@media(max-width:776px) {
+    #rate-adds article{
+        padding: 0
+    }
+}
+
+/* назва пропозиції */
+#rate-adds h5{
+    font-size: 12px;
+    font-weight: 700;
+    padding-top: 10px;
+    line-height: 1.3;
+}
+
+#rate-adds h5 span{
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--black-light);
+    margin: 5px 0 0
+}
+
+/* //////////////////////
+текстова інформація внизу
+////////////////////// */
+#rate-desc{
+    font-size: 14px;
+}
+
+#rate-desc p{
+    margin: 0 0 30px;
+    text-align: justify;
+}
+
+#rate-desc hr{
+    border-top: 1px solid var(--cyan);
+    margin: 30px 0;
+}
+
+/* /////////////
+кнопка відправки 
+///////////// */
+#rate-submit{
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+#rate-submit input[type="submit"]{
+    width: auto;
 }
