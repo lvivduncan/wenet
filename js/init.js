@@ -145,7 +145,7 @@ $('.tariff .params').height(paramsHeight);
 
 $('.select-single input[type=checkbox]').on('change', function () {
 
-    let group = $(this).closest('.select-single');
+    var group = $(this).closest('.select-single');
 
     $('input[type=checkbox]', group).removeClass('selected-item');
 

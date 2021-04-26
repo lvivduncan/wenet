@@ -185,3 +185,9 @@
 #rate-submit input[type="submit"]{
     width: auto;
 }
+
+@media(max-width:400px) {
+    #rate-submit input[type="submit"]{
+        width: 100%
+    }   
+}
