@@ -85,6 +85,16 @@
     white-space: nowrap;
 }
 
+@media(max-width:400px) {
+    #rate-form p{
+        margin: 0;
+    }
+
+    #rate-form label span{
+        display: none;
+    }
+}
+
 /* //////////////////
 пропозиції та додатки 
 ////////////////// */
