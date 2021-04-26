@@ -19,33 +19,22 @@ input[type="password"]:focus{
 
 input[type="submit"]{
     display: inline-block;
-    /* padding: 5px; */
     width: 100%;
     margin: 5px 0;
     cursor: pointer;
-    /* background: var(--gray-light); */
     border: 1px solid var(--gray);
     border-radius: 5px;
     transition: .5s;
     font-size: inherit;
     font-family: inherit;
-
-
-
-    /* display: inline-block; */
     padding: 5px 10px;
-    /* width: 100%; */
     background: var(--cyan);
-    /* border: 1px solid var(--gray); */
     color: var(--white-light);
-    /* border-radius: 5px; */
     text-align: center;
-    /* text-decoration: none; */
     transition: .5s;
 }
 
 input[type="submit"]:hover{
-    /* background: var(--gray); */
     background: var(--cyan-dark);
 }
 
@@ -98,7 +87,6 @@ copy from cabinet
 }
 
 .checkbox:checked + label:before {
-	/* background: var(--blue); */
 	background: var(--cyan);
 }
 
@@ -132,7 +120,6 @@ copy from cabinet
 	height: 22px;
 	border: 1px solid var(--gray-light);
 	border-radius: 50%;
-	/* background: var(--white); */
 	background: var(--white-light);
 }
 
@@ -144,7 +131,6 @@ copy from cabinet
 	width: 16px;
 	height: 16px;
 	border-radius: 50%;
-	/* background: var(--blue); */
 	background: var(--cyan);
 	box-shadow: inset 0 1px 1px rgba(0,0,0,.5);
 	opacity: 0;
@@ -155,9 +141,6 @@ copy from cabinet
 	opacity: 1;
 }
 
-/* .radio:focus + label:before {
-	box-shadow: 0 0 0 3px var(--yellow);
-} */
 /* //////////////
 copy from cabinet
 ////////////// */
