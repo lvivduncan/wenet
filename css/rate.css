@@ -193,7 +193,7 @@
 }
 
 #rate-submit input[type="submit"]{
-    width: auto;
+    width: 30%;
 }
 
 @media(max-width:400px) {
