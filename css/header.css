@@ -129,8 +129,18 @@
     position: relative;
 }
 
-#nav-panel .levus-dropdown-content .cities li:hover{
+/* #nav-panel .levus-dropdown-content .cities li:hover{
     color: var(--cyan);
+} */
+
+#nav-panel .levus-dropdown-content .cities li a{
+    margin: 0;
+    /* cursor: pointer; */
+    /* display: flex; */
+    /* align-items: center; */
+    /* position: relative; */
+    font-size: inherit;
+    font-weight: inherit;
 }
 
 #nav-panel .levus-dropdown-content svg{

@@ -114,9 +114,14 @@ $('#menu-button').on('click', function (e) {
     $('.levus-dropdown-content').removeClass('open');
 });
 
+// 1 кнопка активна
+$('#rates dt span').eq(0).addClass('active');
+
+// 1 вкладка активна
+$('#rates dd > div').eq(0).addClass('active');
 
 // вкладки у тарифах
-$('#rate dt span').on('click', function(){
+$('#rates dt span').on('click', function(){
 
     var cnt = $(this).index();
 
@@ -124,9 +129,10 @@ $('#rate dt span').on('click', function(){
     $(this).addClass('active').siblings().removeClass('active');
 
     // так само
-    $('#rate dd > div').removeClass('active').eq(cnt).addClass('active');
+    $('#rates dd > div').removeClass('active').eq(cnt).addClass('active');
 
 });
+
 
 // вирівнювання блоків у тарифі -- за найбільшим (за 1 тарифом, бо він буде скоріше за все і найдовшим)
 var optionsHeight = $('.tariff .options').eq(0).height();
@@ -142,7 +148,6 @@ $('.tariff .params').height(paramsHeight);
 
 
 // чекбокси у тарифі
-
 $('.select-single input[type=checkbox]').on('change', function () {
 
     var group = $(this).closest('.select-single');
@@ -162,36 +167,6 @@ $('.select-single input[type=checkbox]').on('change', function () {
         $(this).prop('checked', false);
     }
 
-})
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+});
 
 // end

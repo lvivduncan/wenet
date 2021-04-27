@@ -27,7 +27,7 @@ input[type="submit"]{
     transition: .5s;
     font-size: inherit;
     font-family: inherit;
-    padding: 5px 10px;
+    padding: 6px 10px;
     background: var(--cyan);
     color: var(--white-light);
     text-align: center;

@@ -325,7 +325,7 @@
     padding: 5px;
     width: 100%;
     background: var(--cyan);
-    border: 1px solid var(--gray);
+    /* border: 1px solid var(--gray); */
     color: var(--white-light);
     border-radius: 5px;
     text-align: center;

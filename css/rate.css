@@ -135,11 +135,14 @@
 }
 
 /* заголовок блоку */
+#rate h3,
 #rate h4{
     text-align: center;
+    font-size: 18px;
 }
 
 @media(max-width:776px) {
+    #rate h3,
     #rate h4{
         margin: 20px 0;
     }
