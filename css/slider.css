@@ -2,8 +2,7 @@
     min-height: 350px;
     background: url('../images/slider.png') repeat;
     padding: 50px 0;
-    box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 20%);
-    margin: 0 0 60px;
+    margin: 0 0 40px;
 }
 
 @media(max-width:776px) {

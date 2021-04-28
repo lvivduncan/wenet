@@ -7,7 +7,6 @@
     left: 0;
     background: var(--white-light);
     z-index: 9;
-    box-shadow: 0 0 10px 0 rgb(0 0 0 / 20%);
 }
 
 #header .wrap{
