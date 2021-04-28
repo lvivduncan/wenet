@@ -125,7 +125,6 @@
 
 @media(max-width:776px) {
     #rate-adds aside{
-        /* flex: 1; */
         border: none;
     }   
 }
