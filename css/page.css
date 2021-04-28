@@ -15,7 +15,6 @@
     left: 0;
     z-index: -1;
     /* фон має бути вставлений з адмінки */
-    /* background-image: url(../temp/bg3.jpg); */
     background-position: center top!important;
     background-size: 100% 100%!important;
 }
@@ -58,6 +57,7 @@
 
 #page img{
     margin: 0 0 30px;
+    border-radius: 5px;
 }
 
 /* шаринг */
