@@ -8,8 +8,6 @@
 
 @import url('./levus-dropdown.css');
 
-/* @import url('./breadcrumbs.css'); */
-
 @import url('./services.css');
 
 @import url('./slider.css');
@@ -25,6 +23,8 @@
 @import url('./rate.css');
 
 @import url('./articles.css');
+
+@import url('./pagination.css');
 
 @import url('./footer.css');
 
