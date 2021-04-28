@@ -15,7 +15,6 @@
     left: 0;
     z-index: -1;
     /* фон має бути вставлений з адмінки */
-    /* background-image: url(../temp/bg2.jpg); */
     background-position: center top!important;
     background-size: 100% 100%!important;
 }
@@ -70,11 +69,6 @@
     display: flex;
     align-items: center;
 }
-
-/* #services article img{
-    width: 22px;
-    margin: 0 10px 0 0;
-} */
 
 #services article svg{
     width: 22px!important;
