@@ -70,21 +70,3 @@
     margin: 0 0 30px;
     border-radius: 5px;
 }
-
-/* шаринг */
-.share-facebook svg,
-.share-twitter svg,
-.share-linkedin svg,
-.share-telegram svg,
-.share-viber svg{
-    transition: .5s;
-    transform: translateY(0);
-}
-
-.share-facebook:hover svg,
-.share-twitter:hover svg,
-.share-linkedin:hover svg,
-.share-telegram:hover svg,
-.share-viber:hover svg{
-    transform: translateY(-5px);
-}

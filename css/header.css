@@ -7,6 +7,7 @@
     left: 0;
     background: var(--white-light);
     z-index: 9;
+    border-bottom: 1px solid var(--gray);  
 }
 
 #header .wrap{

@@ -27,6 +27,12 @@
     font-size: 28px;
 }
 
+@media(max-width:776px) {
+    #rates h1{
+        font-size: 26px!important;
+    }
+}
+
 #rates .wrap{
     flex-flow: column;
 }
@@ -114,7 +120,7 @@
 
 @media(max-width: 450px) {
     #rates dd > div.active{
-        grid-template-columns: 290px;
+        grid-template-columns: 310px;
     }   
 }
 
@@ -280,7 +286,7 @@
 /* блок з додатковими опціями */
 .tariff .options{
     margin: 10px 0;
-    padding: 10px 0;
+    padding: 10px 0 0;
     border-top: 1px solid var(--gray-light);
 }
 
