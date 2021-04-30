@@ -44,6 +44,10 @@
     border: 1px solid var(--gray-light);
 }
 
+#faq img{
+    vertical-align: middle;
+}
+
 #faq .wrap aside ul,
 #faq .wrap aside ol{
     margin: 0 0 0 24px;
@@ -65,11 +69,15 @@
     border-radius: 5px;
     border: 1px solid var(--gray-light);
     padding: 12px 10px;
-    margin: 0 0 30px;
+    margin: 30px 0 0;
     background: var(--white-light);
     box-shadow: 0 3px 1px -2px rgb(159 193 212 / 30%), 
         0 2px 2px 0 rgb(159 193 212 / 24%), 
         0 1px 5px 0 rgb(159 193 212 / 22%);
+}
+
+#faq-content dl:first-child{
+    margin:0;
 }
 
 /* question */
