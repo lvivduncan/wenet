@@ -169,4 +169,10 @@ $('.select-single input[type=checkbox]').on('change', function () {
 
 });
 
+// faq
+$('#faq-content dt').on('click', function(){
+    $(this).toggleClass('active');
+    $(this).next().toggleClass('active');
+});
+
 // end

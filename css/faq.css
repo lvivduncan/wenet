@@ -39,18 +39,110 @@
     background: var(--white-light);
     box-shadow: 0 3px 1px -2px rgb(159 193 212 / 30%), 0 2px 2px 0 rgb(159 193 212 / 24%), 0 1px 5px 0 rgb(159 193 212 / 22%);
 
-    padding: 10px;
+    padding: 10px;    
+    border-radius: 5px;
+    border: 1px solid var(--gray-light);
 }
 
-#faq .wrap aside ul{
-    margin: 0 0 0 30px;
+#faq .wrap aside ul,
+#faq .wrap aside ol{
+    margin: 0 0 0 24px;
 }
 
-#faq .wrap aside ul li{
-    margin: 5px 0;
+#faq .wrap aside li{
+    margin: 10px 0;
 }
 
-#faq .wrap #faq-content{
-    /* 2 */
-
+#faq .wrap aside li a{
+    margin: 0 0 0 5px;
+    display: inline-flex;
 }
+
+/* питання-відповідь */
+#faq-content{}
+
+#faq-content dl{
+    border-radius: 5px;
+    border: 1px solid var(--gray-light);
+    padding: 12px 10px;
+    margin: 0 0 30px;
+    background: var(--white-light);
+    box-shadow: 0 3px 1px -2px rgb(159 193 212 / 30%), 
+        0 2px 2px 0 rgb(159 193 212 / 24%), 
+        0 1px 5px 0 rgb(159 193 212 / 22%);
+}
+
+/* question */
+#faq-content dt{
+    position: relative;
+    font-size: 16px;
+    font-weight: normal;
+    display: flex;
+    align-items: center;
+    padding: 5px 0 5px 20px;
+    margin: 0 0 10px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%234a9ad5'%3E%3Cpath fill-rule='evenodd' d='M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z'/%3E%3C/svg%3E");
+
+    background-repeat: no-repeat;
+    background-position: right .75rem center;
+    background-size: 20px 20px;
+    cursor: pointer;
+    transition: background .5s;
+}
+
+#faq-content dt::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background: var(--gray);
+    display: block;
+    border-radius: 5px;
+}
+
+#faq-content dt svg {
+    margin-right: 10px;
+    width: 22px;
+    height: 22px;
+}
+
+#faq-content dt.active{
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%234a9ad5'%3E%3Cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
+}
+
+#faq-content dt.active::before {
+    background: var(--cyan);
+}
+
+/* answer */
+#faq-content dd{
+    display: none;
+    padding: 20px;
+}
+
+#faq-content dd.active{
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**/
