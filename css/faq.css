@@ -34,6 +34,12 @@
     grid-gap: 30px;
 }
 
+@media(max-width:776px) {
+    #faq .wrap{
+        grid-template-columns: 1fr;
+    }   
+}
+
 /* перелік */
 #faq .wrap aside{
     background: var(--white-light);
@@ -44,20 +50,26 @@
     border: 1px solid var(--gray-light);
 }
 
+@media(max-width:776px) {
+    #faq .wrap aside{
+        display: none;
+    }
+}
+
 #faq img{
     vertical-align: middle;
 }
 
-#faq .wrap aside ul,
-#faq .wrap aside ol{
-    margin: 0 0 0 24px;
+#faq ul,
+#faq ol{
+    margin: 0 0 0 40px;
 }
 
-#faq .wrap aside li{
+#faq li{
     margin: 10px 0;
 }
 
-#faq .wrap aside li a{
+#faq li a{
     margin: 0 0 0 5px;
     display: inline-flex;
 }
