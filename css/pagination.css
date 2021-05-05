@@ -42,15 +42,3 @@
     background: var(--purpur);
     color: var(--white-light);
 }
-
-.pagination svg{
-    width: 24px;
-    height: 24px;
-}
-
-/* first and last */
-li.MarkupPagerNavFirst,
-li.MarkupPagerNavLast{
-    position: relative;
-    top: 7px;
-}

@@ -27,14 +27,16 @@
     margin: 20px 0 40px;
 }
 
-#articles .wrap {
+#articles .wrap,
+#output{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 20px;
 }
 
 @media(max-width: 776px) {
-    #articles .wrap {
+    #articles .wrap,
+    #output{
         grid-template-columns: 1fr;
     }
 }
@@ -92,7 +94,8 @@
     color: var(--dark);
     font-size: 24px;
     text-decoration: none;
-    -webkit-transition: color 0.5s;
+    display: block;
+    line-height: 1.3;
     transition: color 0.5s;
 }
 

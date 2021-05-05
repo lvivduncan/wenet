@@ -67,6 +67,11 @@
     color: var(--cyan);
 }
 
+/* current */
+#nav li.active a{
+    color: var(--cyan);
+}
+
 #nav li svg{
     width: 18px;
     height: 18px;

@@ -28,6 +28,11 @@
     --black: #1a1a1a;
     --white: #fffff0;
     --white-light: #fff;
+
+    --tv-bg: rgba(66, 165, 245, 0.1);
+    --tv-bg-2: #ebebeb;
+    --tv-bg-3: rgba(66, 165, 245, 0.5);
+    --tv-border: rgba(66, 165, 245, 1);
 }
 
 html,
