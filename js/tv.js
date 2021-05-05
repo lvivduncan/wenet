@@ -10,7 +10,7 @@
     head3 = document.querySelector('#tv-head-2'),
     head4 = document.querySelector('#tv-head-3');
 
-    fetch('https://wenet.lviv.ua/tv_channels.json')
+    fetch('https://dev.wenet.lviv.ua/tv_channels.json')
         .then(response => {
             if (response.status === 200) {
                 return response.json();

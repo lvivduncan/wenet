@@ -278,8 +278,6 @@
     }
 }
 
-
-
 /* channels */
 #tv-content {
     display: flex;
@@ -289,7 +287,6 @@
 /* channel */
 #tv-content article {
     display: flex;
-    -webkit-transition: all .5s;
     transition: all .5s;
 }
 
@@ -331,7 +328,7 @@
 /* logo channel */
 #tv-content article header:first-child img{
     margin-right: 10px;
-    height: 45px;  
+    height: 45px;
 }
 
 #tv-content .channel {
