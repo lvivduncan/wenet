@@ -75,7 +75,7 @@
     transition: stroke .5s;
 }
 
-@media(max-width:776px) {
+@media(max-width:996px) {
     #nav-panel svg{
         margin: 0;
     }
@@ -85,7 +85,7 @@
     stroke: var(--cyan);
 }
 
-@media(max-width:776px) {
+@media(max-width:996px) {
     #nav-panel span{
         display: none;
     }
@@ -99,7 +99,7 @@
     display: none!important;
 }
 
-@media(max-width: 776px) {
+@media(max-width: 996px) {
     #menu-button{
         display: inline-flex!important;
     }
