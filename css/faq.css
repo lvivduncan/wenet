@@ -95,7 +95,9 @@
     position: relative;
     font-size: 16px;
     font-weight: normal;
-    display: flex;
+    /* display: flex; */
+    display: grid;
+    grid-template-columns: 30px 1fr;
     align-items: center;
     padding: 5px 0 5px 20px;
     margin: 0 0 10px;
@@ -121,7 +123,7 @@
 }
 
 #faq-content dt svg {
-    margin-right: 10px;
+    /* margin-right: 10px; */
     width: 22px;
     height: 22px;
 }
