@@ -3,6 +3,11 @@
 /* основна обгортка */
 .levus-dropdown{
     position: relative;
+
+
+
+    /**/
+    z-index: 5;
 }
 
 /* схований блок */
@@ -40,16 +45,16 @@
 }
 
 /* обгортка для цілої сторінки */
-.levus-dropdown-wrapper{
+#levus-dropdown-wrapper{
     position: fixed;
-    z-index: 3;
+    z-index: 4;
     top: 0;
     left: 0;
     bottom: 0;
     right: 0;
-    display: none;
+    /* display: none; */
 }
 
-.levus-dropdown-wrapper.open{
+/* .levus-dropdown-wrapper.open{
     display: block;
-}
+} */

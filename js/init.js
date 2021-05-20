@@ -1,45 +1,55 @@
 // start
 
-// плагін дропдауна
-$('body').append('<div class="levus-dropdown-wrapper"></div>');
+const log = console.log;
 
-$('.levus-dropdown-wrapper').on('click', function () {
-    $('.nav-panel').removeClass('open');
-    $('.levus-dropdown-content').removeClass('open');
-    $(this).removeClass('open');
 
-    // mobile
-    $('#nav').removeClass('open');
-    $('body').removeClass('lock');
+const body = document.querySelector('body');
+
+// wrapper for levus-dropdown
+const dropdownWrapper = document.createElement('div');
+dropdownWrapper.setAttribute('id', 'levus-dropdown-wrapper');
+
+// levus-dropdown
+document.querySelectorAll('.levus-dropdown').forEach(item => {
+    item.addEventListener('click', function(){
+
+        const currentNavPanel = this.querySelector('.nav-panel');
+        const currentDropdownContent = this.querySelector('.levus-dropdown-content');
+
+        if(this.querySelector('.nav-panel').classList.contains('open')){
+            
+            removeDropdown();
+            
+            // remove wrapper
+            dropdownWrapper.remove();
+
+        } else if(!this.querySelector('.nav-panel').classList.contains('open')){
+            
+            removeDropdown();
+
+            currentNavPanel.classList.add('open');
+            currentDropdownContent.classList.add('open');
+
+            // add wrapper
+            body.append(dropdownWrapper);
+        }
+
+    });
 });
 
-$('.nav-panel').on('click', function () {
+body.addEventListener('click', (e) => {
 
-    $('.levus-dropdown-content').removeClass('open');
+    if(e.target.id === 'levus-dropdown-wrapper'){
 
-    if ($(this).hasClass('open')) {
-        $(this).removeClass('open');
-    } else {
-        $('.nav-panel').removeClass('open');
-        $(this).addClass('open');
-        $(this).next('.levus-dropdown-content').addClass('open');
+        removeDropdown();
+
+        // del wrapper
+        dropdownWrapper.remove();
     }
-
-    if ($('.levus-dropdown-content.open').length > 0) {
-        $('.levus-dropdown-wrapper').addClass('open');
-    } else {
-        $('.levus-dropdown-wrapper').removeClass('open');
-    }
-
-    $('#more-link').removeClass('open');
-
-    $('#nav').removeClass('open');
-    $('#menu-button').removeClass('open');
-    $('body').removeClass('lock');
-
 });
-// плагін дропдауна
 
+
+/* 
 // зв'язка місто + контакти
 if (localStorage.getItem('city') !== null){
 
@@ -63,7 +73,58 @@ if (localStorage.getItem('city') !== null){
     $('#city').text(city);
     $('#nav-panel-contacts .levus-dropdown-content h5:first-child').text(city);
 }
+ */
 
+document.querySelectorAll('.cities li span').forEach(item => {
+    item.addEventListener('click', function(){
+
+        // city name
+        const city = this.innerText;
+    
+        // iclude name 
+        document.getElementById('city').innerText = city;
+
+        if (localStorage.getItem('city') !== null){
+
+            const shedule = document.querySelectorAll('.shedule');
+            const phones = document.querySelectorAll('.phones');
+
+            // значить уже якась назва лежить
+            if(localStorage.city == 'Борислав'){
+
+                shedule.forEach(item => {
+                    shedule[0].classList.remove('open');
+                    shedule[1].classList.add('open');
+
+                    phones[0].classList.remove('open');
+                    phones[1].classList.add('open');                    
+                });
+
+            } else {
+
+                shedule.forEach(item => {
+                    shedule[0].classList.add('open');
+                    shedule[1].classList.remove('open');
+
+                    phones[0].classList.add('open');
+                    phones[1].classList.remove('open');                    
+                });
+            }
+
+            // перезаписуємо
+            localStorage.setItem('city', city);
+        } else {
+            
+            // перезаписуємо
+            localStorage.setItem('city', city);
+        }
+        
+
+    });
+});
+
+
+/* 
 $('.cities li a').on('click', function () {
     var city = $(this).text();
 
@@ -97,17 +158,12 @@ $('.cities li a').on('click', function () {
     }
 });
 // зв'язка місто + контакти
-
-/* 
-// drop inner ul
-$('#more-link').on('click', function () {
-    $(this).toggleClass('open');
-
-    setTimeout(() => {
-        $('#more-link').removeClass('open');
-    }, 3000);
-});
  */
+
+
+
+
+
 
 // slider home page
 $('#slider .owl-carousel').owlCarousel({
@@ -195,5 +251,12 @@ $('#faq-content dt').on('click', function(){
     $(this).toggleClass('active');
     $(this).next().toggleClass('active');
 });
+
+
+// remove dropdown items (close)
+function removeDropdown(){
+    document.querySelectorAll('.nav-panel').forEach(item => item.classList.remove('open'));
+    document.querySelectorAll('.levus-dropdown-content').forEach(item => item.classList.remove('open'));
+}
 
 // end
