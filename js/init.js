@@ -3,6 +3,9 @@
 const log = console.log;
 
 
+
+
+
 const body = document.querySelector('body');
 
 // wrapper for levus-dropdown
@@ -50,121 +53,42 @@ body.addEventListener('click', (e) => {
     }
 });
 
-
-/* 
-// зв'язка місто + контакти
+// check localStorage
 if (localStorage.getItem('city') !== null){
 
-    var city = localStorage.getItem('city');
-    
-    // значить уже якась назва лежить
-    if(localStorage.getItem('city') == 'Борислав'){
-        $('.levus-dropdown-content .phones').eq(0).addClass('open');
-        $('.levus-dropdown-content .phones').eq(1).removeClass('open');
+    const cityName = localStorage.city;
 
-        $('.levus-dropdown-content .shedule').eq(0).addClass('open');
-        $('.levus-dropdown-content .shedule').eq(1).removeClass('open');
-    } else {
-        $('.levus-dropdown-content .phones').eq(0).removeClass('open');
-        $('.levus-dropdown-content .phones').eq(1).addClass('open');
-        
-        $('.levus-dropdown-content .shedule').eq(0).removeClass('open');
-        $('.levus-dropdown-content .shedule').eq(1).addClass('open');
-    }
+    document.getElementById('city').innerText = document.querySelector('#nav-panel-contacts h5').innerText = cityName;
 
-    $('#city').text(city);
-    $('#nav-panel-contacts .levus-dropdown-content h5:first-child').text(city);
+    checkCity(cityName);
 }
- */
 
+// select city
 document.querySelectorAll('.cities li span').forEach(item => {
     item.addEventListener('click', function(){
 
         // city name
-        const city = this.innerText;
-    
-        // iclude name 
-        document.getElementById('city').innerText = city;
+        const cityName = this.innerText;
 
+        // insert city name
+        document.getElementById('city').innerText = document.querySelector('#nav-panel-contacts h5').innerText = cityName;
+    
         if (localStorage.getItem('city') !== null){
 
-            const shedule = document.querySelectorAll('.shedule');
-            const phones = document.querySelectorAll('.phones');
-
-            // значить уже якась назва лежить
-            if(localStorage.city == 'Борислав'){
-
-                shedule.forEach(item => {
-                    shedule[0].classList.remove('open');
-                    shedule[1].classList.add('open');
-
-                    phones[0].classList.remove('open');
-                    phones[1].classList.add('open');                    
-                });
-
-            } else {
-
-                shedule.forEach(item => {
-                    shedule[0].classList.add('open');
-                    shedule[1].classList.remove('open');
-
-                    phones[0].classList.add('open');
-                    phones[1].classList.remove('open');                    
-                });
-            }
+            checkCity(cityName);
 
             // перезаписуємо
-            localStorage.setItem('city', city);
+            localStorage.setItem('city', cityName);
         } else {
             
             // перезаписуємо
-            localStorage.setItem('city', city);
+            localStorage.setItem('city', cityName);
         }
         
+        removeDropdown();
 
     });
 });
-
-
-/* 
-$('.cities li a').on('click', function () {
-    var city = $(this).text();
-
-    // міняємо назву міста
-    $('#city').text(city);
-    $('#nav-panel-contacts .levus-dropdown-content h5:first-child').text(city);
-
-    // закриваємо випадачку
-    $('.levus-dropdown').removeClass('open')
-    $('.levus-dropdown-content').removeClass('open')
-
-    if (localStorage.getItem('city') !== null){
-        // значить уже якась назва лежить
-        if(localStorage.city == 'Борислав'){
-            $('.levus-dropdown-content .phones').eq(0).addClass('open');
-            $('.levus-dropdown-content .phones').eq(1).removeClass('open');
-
-            $('.levus-dropdown-content .shedule').eq(0).addClass('open');
-            $('.levus-dropdown-content .shedule').eq(1).removeClass('open');
-        } else {
-            $('.levus-dropdown-content .phones').eq(0).removeClass('open');
-            $('.levus-dropdown-content .phones').eq(1).addClass('open');
-
-            $('.levus-dropdown-content .shedule').eq(0).removeClass('open');
-            $('.levus-dropdown-content .shedule').eq(1).addClass('open');
-        }
-        // перезаписуємо
-        localStorage.setItem('city', city);
-    } else {
-        localStorage.setItem('city', city);
-    }
-});
-// зв'язка місто + контакти
- */
-
-
-
-
 
 
 // slider home page
@@ -261,4 +185,31 @@ function removeDropdown(){
     document.querySelectorAll('.levus-dropdown-content').forEach(item => item.classList.remove('open'));
 }
 
+// check city
+function checkCity(cityName){
+    
+    const shedule = document.querySelectorAll('.shedule');
+    const phones = document.querySelectorAll('.phones');
+
+    if(cityName == 'Борислав'){
+
+        shedule.forEach(item => {
+            shedule[0].classList.add('open');
+            shedule[1].classList.remove('open');
+
+            phones[0].classList.add('open');
+            phones[1].classList.remove('open');                    
+        });
+
+    } else {
+
+        shedule.forEach(item => {
+            shedule[0].classList.remove('open');
+            shedule[1].classList.add('open');
+
+            phones[0].classList.remove('open');
+            phones[1].classList.add('open');                    
+        });
+    }
+}
 // end
