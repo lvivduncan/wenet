@@ -10,20 +10,22 @@ const dropdownWrapper = document.createElement('div');
 dropdownWrapper.setAttribute('id', 'levus-dropdown-wrapper');
 
 // levus-dropdown
-document.querySelectorAll('.levus-dropdown').forEach(item => {
+document.querySelectorAll('.nav-panel span').forEach(item => {
     item.addEventListener('click', function(){
 
-        const currentNavPanel = this.querySelector('.nav-panel');
-        const currentDropdownContent = this.querySelector('.levus-dropdown-content');
+        const current = this.parentNode.parentNode;
 
-        if(this.querySelector('.nav-panel').classList.contains('open')){
+        const currentNavPanel = current.querySelector('.nav-panel');
+        const currentDropdownContent = current.querySelector('.levus-dropdown-content');
+
+        if(current.querySelector('.nav-panel').classList.contains('open')){
             
             removeDropdown();
             
             // remove wrapper
             dropdownWrapper.remove();
 
-        } else if(!this.querySelector('.nav-panel').classList.contains('open')){
+        } else if(!current.querySelector('.nav-panel').classList.contains('open')){
             
             removeDropdown();
 
