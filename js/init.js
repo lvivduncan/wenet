@@ -155,85 +155,26 @@ if(document.querySelector('#rates') !== null){
 // rate.html
 const checkboxs = document.querySelectorAll('.select-single .checkbox');
 
-checkboxs.forEach(item => {
-    item.addEventListener('change', function(e){
+// чекбокси у тарифі
+checkboxs.forEach(element => {
+    element.addEventListener('change', function(){
 
-        const parent = e.target.closest('.select-single');
+        const current = this;
 
-        console.log(e.target)
+        const parent = current.closest('.select-single');
 
-        // const current = e.target;
+        if(current.checked === true){
 
-        // if exists 'checked'
-        if(e.target.classList.contains('selected-item')){
+            parent.querySelectorAll('input').forEach(item => {
 
-            // del check
-            e.target.removeAttribute('checked');
-            e.target.classList.remove('selected-item');
-
-            // console.log('selected-item', this)
-
-        } else {
-
-            // // remove attr other inputs
-            parent.querySelectorAll('.checkbox').forEach(element => {
-
-                element.removeAttribute('checked');
-                element.classList.remove('selected-item');
-
-                e.target.setAttribute('checked', 'checked');
-                e.target.classList.add('selected-item');                
+                item.checked = false;
             });
 
-            console.log('not selected-item', this)
-            // console.log(parent.querySelectorAll('.checkbox'))
-
+            current.checked = true;
         }
 
     });
 });
-
-/* 
-checkboxs.forEach(checkbox => {
-    checkbox.addEventListener('change', function(e){
-
-        if(e.target.classList.contains('selected-item')){
-            console.log('checked')
-
-            e.target.classList.remove('selected-item');
-        } else {
-            console.log('not checked')
-
-            e.target.classList.add('selected-item')
-        }        
-    });
-
-});
- */
-
-/* 
-// чекбокси у тарифі
-$('.select-single input[type=checkbox]').on('change', function () {
-
-    // var group = $(this).closest('.select-single');
-
-    // $('input[type=checkbox]', group).removeClass('selected-item');
-
-    // $(this).addClass('selected-item');
-    // $('input[type=checkbox]:not(.selected-item)', group).prop('checked', false);
-
-    // $('input[type=checkbox]', group).removeClass('disabled');
-
-    // if ($('input[type=checkbox]:checked', group).length > 0){
-    //     $('input[type=checkbox]:not(:checked)', group).addClass('disabled');
-    // }
-
-    // if ($(this).is(':checked') && $(this).is('.disabled')) {
-    //     $(this).prop('checked', false);
-    // }
-
-});
- */
 
 // faq
 if(document.getElementById('faq-content') !== null){
