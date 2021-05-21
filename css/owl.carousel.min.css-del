@@ -1,3 +1,8 @@
+/*
+** change to vanilla slider
+*/
+
+
 .owl-carousel,
 .owl-carousel .owl-item {
 	-webkit-tap-highlight-color: transparent;

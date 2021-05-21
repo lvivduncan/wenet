@@ -12,7 +12,8 @@
 
 @import url('./slider.css');
 
-@import url('./owl.carousel.min.css');
+/* @import url('./owl.carousel.min.css'); */
+@import url('./levus-swipe-slider.css');
 
 @import url('./page.css');
 

@@ -12,6 +12,10 @@
     }
 }
 
+#slider .wrap{
+    display: block;
+}
+
 /* слайд розділяємо на 2 нерівні частини */
 #slider .item{
     cursor: move;
