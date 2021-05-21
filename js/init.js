@@ -91,50 +91,79 @@ document.querySelectorAll('.cities li span').forEach(item => {
 });
 
 // mobile menu
-$('#menu-button').on('click', function (e) {
+document.getElementById('menu-button').addEventListener('click', function(e) {
     e.preventDefault();
 
-    $(this).toggleClass('open');
+    this.classList.toggle('open');
 
-    $('#nav').toggleClass('open');
-    $('body').toggleClass('lock');
+    document.getElementById('nav').classList.toggle('open');
+    document.querySelector('body').classList.toggle('open');
 
     // закриваємо випадачку
-    $('.levus-dropdown').removeClass('open');
-    $('.levus-dropdown-content').removeClass('open');
-});
-
-// 1 кнопка активна
-$('#rates dt span').eq(0).addClass('active');
-
-// 1 вкладка активна
-$('#rates dd > div').eq(0).addClass('active');
-
-// вкладки у тарифах
-$('#rates dt span').on('click', function(){
-
-    var cnt = $(this).index();
-
-    // підсвічуємо активний, вимикаємо неактивні
-    $(this).addClass('active').siblings().removeClass('active');
-
-    // так само
-    $('#rates dd > div').removeClass('active').eq(cnt).addClass('active');
+    document.querySelector('.levus-dropdown').classList.remove('open');
+    document.querySelector('.levus-dropdown-content').classList.remove('open');    
 
 });
 
+// rates.html
+if(document.querySelector('#rates') !== null){
+    
+    // вкладки у тарифах
+    const spanRates = document.querySelectorAll('#rates dt span');
+    
+    const divRates = document.querySelectorAll('#rates dd > div');
+    
+    // 1 кнопка активна
+    spanRates[0].classList.add('active');
+    
+    // 1 вкладка активна
+    divRates[0].classList.add('active');
+    
+    spanRates.forEach((item, index) => {
+    
+        item.addEventListener('click', () => {
+    
+            spanRates.forEach(span => span.classList.remove('active'));
+            divRates.forEach(div => div.classList.remove('active'));
+    
+            spanRates[index].classList.add('active');
+            divRates[index].classList.add('active');
+    
+        });
+    
+    });
+    
+    // вирівнювання блоків у тарифі -- за найбільшим (за 1 тарифом, бо він буде скоріше за все і найдовшим)
+    const optionsHeight = document.querySelector('.tariff .options').offsetHeight;
+    document.querySelectorAll('.tariff .options').forEach(item => {
+        item.style.height = `${optionsHeight}px`;
+    });
+    
+    // вирівнювання блоків у тарифі -- блок ціни 
+    const priceHeight = document.querySelector('.tariff .price').offsetHeight;
+    document.querySelectorAll('.tariff .price').forEach(item => {
+        item.style.height = `${priceHeight}px`;
+    });
+    
+    // вирівнювання блоків у тарифі -- додаткові параметри
+    const paramsHeight = document.querySelector('.tariff .params').offsetHeight;
+    document.querySelectorAll('.tariff .options').forEach(item => {
+        item.style.height = `${paramsHeight}px`;
+    });
+}
 
-// вирівнювання блоків у тарифі -- за найбільшим (за 1 тарифом, бо він буде скоріше за все і найдовшим)
-var optionsHeight = $('.tariff .options').eq(0).height();
-$('.tariff .options').height(optionsHeight);
+// rate.html
 
-// блок ціни 
-var priceHeight = $('.tariff .price').eq(0).height();
-$('.tariff .price').height(priceHeight);
+const checkboxs = document.querySelectorAll('.select-single input[type=checkbox]');
 
-var paramsHeight = $('.tariff .params').eq(0).height();
-$('.tariff .params').height(paramsHeight);
+checkboxs.forEach(item => {
+    item.addEventListener('change', function(){
 
+        const group = this.closest('.select-single');
+
+        console.log(group);
+    });
+});
 
 
 // чекбокси у тарифі
@@ -158,6 +187,7 @@ $('.select-single input[type=checkbox]').on('change', function () {
     }
 
 });
+
 
 // faq
 $('#faq-content dt').on('click', function(){
