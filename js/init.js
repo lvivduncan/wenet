@@ -153,48 +153,99 @@ if(document.querySelector('#rates') !== null){
 }
 
 // rate.html
-
-const checkboxs = document.querySelectorAll('.select-single input[type=checkbox]');
+const checkboxs = document.querySelectorAll('.select-single .checkbox');
 
 checkboxs.forEach(item => {
-    item.addEventListener('change', function(){
+    item.addEventListener('change', function(e){
 
-        const group = this.closest('.select-single');
+        const parent = e.target.closest('.select-single');
 
-        console.log(group);
+        console.log(e.target)
+
+        // const current = e.target;
+
+        // if exists 'checked'
+        if(e.target.classList.contains('selected-item')){
+
+            // del check
+            e.target.removeAttribute('checked');
+            e.target.classList.remove('selected-item');
+
+            // console.log('selected-item', this)
+
+        } else {
+
+            // // remove attr other inputs
+            parent.querySelectorAll('.checkbox').forEach(element => {
+
+                element.removeAttribute('checked');
+                element.classList.remove('selected-item');
+
+                e.target.setAttribute('checked', 'checked');
+                e.target.classList.add('selected-item');                
+            });
+
+            console.log('not selected-item', this)
+            // console.log(parent.querySelectorAll('.checkbox'))
+
+        }
+
     });
 });
 
+/* 
+checkboxs.forEach(checkbox => {
+    checkbox.addEventListener('change', function(e){
 
+        if(e.target.classList.contains('selected-item')){
+            console.log('checked')
+
+            e.target.classList.remove('selected-item');
+        } else {
+            console.log('not checked')
+
+            e.target.classList.add('selected-item')
+        }        
+    });
+
+});
+ */
+
+/* 
 // чекбокси у тарифі
 $('.select-single input[type=checkbox]').on('change', function () {
 
-    var group = $(this).closest('.select-single');
+    // var group = $(this).closest('.select-single');
 
-    $('input[type=checkbox]', group).removeClass('selected-item');
+    // $('input[type=checkbox]', group).removeClass('selected-item');
 
-    $(this).addClass('selected-item');
-    $('input[type=checkbox]:not(.selected-item)', group).prop('checked', false);
+    // $(this).addClass('selected-item');
+    // $('input[type=checkbox]:not(.selected-item)', group).prop('checked', false);
 
-    $('input[type=checkbox]', group).removeClass('disabled');
+    // $('input[type=checkbox]', group).removeClass('disabled');
 
-    if ($('input[type=checkbox]:checked', group).length > 0)
-        $('input[type=checkbox]:not(:checked)', group).addClass('disabled');
+    // if ($('input[type=checkbox]:checked', group).length > 0){
+    //     $('input[type=checkbox]:not(:checked)', group).addClass('disabled');
+    // }
 
-    if ($(this).is(':checked') && $(this).is('.disabled'))
-    {
-        $(this).prop('checked', false);
-    }
+    // if ($(this).is(':checked') && $(this).is('.disabled')) {
+    //     $(this).prop('checked', false);
+    // }
 
 });
-
+ */
 
 // faq
-$('#faq-content dt').on('click', function(){
-    $(this).toggleClass('active');
-    $(this).next().toggleClass('active');
-});
+if(document.getElementById('faq-content') !== null){
 
+    document.querySelectorAll('#faq-content dt').forEach(item => {
+        item.addEventListener('click', function(){
+            this.classList.toggle('active');
+
+            this.closest('dl').querySelector('dd').classList.toggle('active');
+        });
+    });
+}
 
 // swipe-slider
 {
@@ -332,7 +383,6 @@ $('#faq-content dt').on('click', function(){
         }, 50);
     }
 }
-
 
 // remove dropdown items (close)
 function removeDropdown(){
