@@ -1,11 +1,5 @@
 // start
 
-const log = console.log;
-
-
-
-
-
 const body = document.querySelector('body');
 
 // wrapper for levus-dropdown
@@ -13,47 +7,23 @@ const dropdownWrapper = document.createElement('div');
 dropdownWrapper.setAttribute('id', 'levus-dropdown-wrapper');
 
 // levus-dropdown
-document.querySelectorAll('.nav-panel span').forEach(item => {
-    item.addEventListener('click', function(){
+document.querySelectorAll('.nav-panel span').forEach(item => item.addEventListener('click', openDropdown));
 
-        const current = this.parentNode.parentNode;
-
-        const currentNavPanel = current.querySelector('.nav-panel');
-        const currentDropdownContent = current.querySelector('.levus-dropdown-content');
-
-        if(current.querySelector('.nav-panel').classList.contains('open')){
-            
-            removeDropdown();
-            
-            // remove wrapper
-            dropdownWrapper.remove();
-
-        } else if(!current.querySelector('.nav-panel').classList.contains('open')){
-            
-            removeDropdown();
-
-            currentNavPanel.classList.add('open');
-            currentDropdownContent.classList.add('open');
-
-            // add wrapper
-            body.append(dropdownWrapper);
-        }
-
-    });
-});
+// levus-dropdown
+document.querySelectorAll('.nav-panel svg').forEach(item => item.addEventListener('click', openDropdown));
 
 body.addEventListener('click', (e) => {
 
     if(e.target.id === 'levus-dropdown-wrapper'){
 
-        removeDropdown();
+        closeDropdown();
 
         // del wrapper
         dropdownWrapper.remove();
     }
 });
 
-// check localStorage
+// check localStorage city
 if (localStorage.getItem('city') !== null){
 
     const cityName = localStorage.city;
@@ -63,16 +33,28 @@ if (localStorage.getItem('city') !== null){
     checkCity(cityName);
 }
 
+// check localStorage logo href
+if (localStorage.getItem('logo') !== null){
+
+    const cityLink = localStorage.logo;
+
+    document.querySelector('#logo a').setAttribute('href', cityLink);
+}
+
 // select city
-document.querySelectorAll('.cities li span').forEach(item => {
+document.querySelectorAll('.cities li a').forEach(item => {
     item.addEventListener('click', function(){
 
         // city name
         const cityName = this.innerText;
 
+        // link to page
+        const cityLink = this.href;
+
         // insert city name
         document.getElementById('city').innerText = document.querySelector('#nav-panel-contacts h5').innerText = cityName;
     
+        // check city name
         if (localStorage.getItem('city') !== null){
 
             checkCity(cityName);
@@ -84,8 +66,14 @@ document.querySelectorAll('.cities li span').forEach(item => {
             // перезаписуємо
             localStorage.setItem('city', cityName);
         }
+
+        // link for logo href
+        localStorage.setItem('logo', cityLink);
         
-        removeDropdown();
+        closeDropdown();
+
+        // logo href
+        document.querySelector('#logo a').setAttribute('href', cityLink);
 
     });
 });
@@ -97,7 +85,7 @@ document.getElementById('menu-button').addEventListener('click', function(e) {
     this.classList.toggle('open');
 
     document.getElementById('nav').classList.toggle('open');
-    document.querySelector('body').classList.toggle('open');
+    document.querySelector('body').classList.toggle('lock');
 
     // закриваємо випадачку
     document.querySelector('.levus-dropdown').classList.remove('open');
@@ -260,12 +248,6 @@ if(document.getElementById('faq-content') !== null){
                 image.addEventListener('dragstart', e => e.preventDefault());
             });
 
-/* 
-            item.addEventListener('pointerdown', e => touchStart(e), false);
-            item.addEventListener('pointermove', e => touchMove(e), false);
-            item.addEventListener('pointerup', touchEnd, false);
-*/
-
         });
     }
 
@@ -325,8 +307,39 @@ if(document.getElementById('faq-content') !== null){
     }
 }
 
+// click and open dropdown
+function openDropdown(){
+    // const current = this.parentNode.parentNode;
+    const current = this.closest('.levus-dropdown');
+
+    const currentNavPanel = current.querySelector('.nav-panel');
+    const currentDropdownContent = current.querySelector('.levus-dropdown-content');
+
+    if(current.querySelector('.nav-panel').classList.contains('open')){
+        
+        closeDropdown();
+        
+        // remove wrapper
+        dropdownWrapper.remove();
+
+    } else if(!current.querySelector('.nav-panel').classList.contains('open')){
+        
+        closeDropdown();
+
+        currentNavPanel.classList.add('open');
+        currentDropdownContent.classList.add('open');
+
+        // add wrapper
+        body.append(dropdownWrapper);
+    }
+
+    // todo: close nav
+    document.getElementById('nav').classList.remove('open');
+    document.querySelector('body').classList.remove('lock');
+}
+
 // remove dropdown items (close)
-function removeDropdown(){
+function closeDropdown(){
     document.querySelectorAll('.nav-panel').forEach(item => item.classList.remove('open'));
     document.querySelectorAll('.levus-dropdown-content').forEach(item => item.classList.remove('open'));
 }
