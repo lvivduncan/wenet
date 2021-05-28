@@ -95,7 +95,7 @@
     position: relative;
     font-size: 16px;
     font-weight: normal;
-    /* display: flex; */
+    user-select: none;
     display: grid;
     grid-template-columns: 30px 1fr;
     align-items: center;
