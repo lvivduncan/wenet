@@ -129,16 +129,14 @@
     position: relative;
 }
 
-/* #nav-panel .levus-dropdown-content .cities li:hover{
+#nav-panel .levus-dropdown-content .cities li.active a,
+#nav-panel .levus-dropdown-content .cities li.active svg{
     color: var(--cyan);
-} */
+    fill: var(--cyan);
+}
 
 #nav-panel .levus-dropdown-content .cities li a{
     margin: 0;
-    /* cursor: pointer; */
-    /* display: flex; */
-    /* align-items: center; */
-    /* position: relative; */
     font-size: inherit;
     font-weight: inherit;
 }
@@ -150,10 +148,15 @@
     position: absolute;
     right: 0;
     top: -5px;
+    transition: .5s;
 }
 
 #nav-panel .levus-dropdown-content .cities li:hover svg{
     fill: var(--cyan);
+}
+
+#nav-panel .levus-dropdown-content .cities li:hover a{
+    color: var(--cyan);
 }
 /* city*/
 

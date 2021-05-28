@@ -95,31 +95,31 @@
     fill: var(--white-light)
 }
 
-#rates dd > div{
+#rates dd .pane-tariff{
     display: none;
 }
 
-#rates dd > div.active{
+#rates dd .pane-tariff.active{
     display: grid;
     grid-template-columns: repeat(3,1fr);
     grid-gap: 20px;
 }
 
 @media(max-width: 996px) {
-    #rates dd > div.active{
+    #rates dd .pane-tariff.active{
         grid-template-columns: repeat(2,340px);
         justify-content: center;
     }   
 }
 
 @media(max-width: 776px) {
-    #rates dd > div.active{
+    #rates dd .pane-tariff.active{
         grid-template-columns: 340px;
     }   
 }
 
 @media(max-width: 450px) {
-    #rates dd > div.active{
+    #rates dd .pane-tariff.active{
         grid-template-columns: 310px;
     }   
 }
@@ -288,6 +288,11 @@
     margin: 10px 0;
     padding: 10px 0 0;
     border-top: 1px solid var(--gray-light);
+
+    /* overflow: hidden; */
+
+    /* display: flex; */
+    /* flex-flow: column; */
 }
 
 .tariff .options p,
@@ -329,7 +334,6 @@
     padding: 5px;
     width: 100%;
     background: var(--cyan);
-    /* border: 1px solid var(--gray); */
     color: var(--white-light);
     border-radius: 5px;
     text-align: center;

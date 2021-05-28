@@ -31,6 +31,14 @@ if (localStorage.getItem('city') !== null){
     document.getElementById('city').innerText = document.querySelector('#nav-panel-contacts h5').innerText = cityName;
 
     checkCity(cityName);
+
+    document.querySelectorAll('.cities li a').forEach(item => {
+        if(item.textContent == cityName){
+            item.closest('li').classList.add('active');
+        }
+    });
+
+    
 }
 
 // check localStorage logo href
@@ -74,7 +82,6 @@ document.querySelectorAll('.cities li a').forEach(item => {
 
         // logo href
         document.querySelector('#logo a').setAttribute('href', cityLink);
-
     });
 });
 
@@ -120,24 +127,12 @@ if(document.querySelector('#rates') !== null){
         });
     
     });
-    
-    // вирівнювання блоків у тарифі -- за найбільшим (за 1 тарифом, бо він буде скоріше за все і найдовшим)
-    const optionsHeight = document.querySelector('.tariff .options').offsetHeight;
-    document.querySelectorAll('.tariff .options').forEach(item => {
-        item.style.height = `${optionsHeight}px`;
-    });
-    
-    // вирівнювання блоків у тарифі -- блок ціни 
-    const priceHeight = document.querySelector('.tariff .price').offsetHeight;
-    document.querySelectorAll('.tariff .price').forEach(item => {
-        item.style.height = `${priceHeight}px`;
-    });
-    
-    // вирівнювання блоків у тарифі -- додаткові параметри
-    const paramsHeight = document.querySelector('.tariff .params').offsetHeight;
-    document.querySelectorAll('.tariff .options').forEach(item => {
-        item.style.height = `${paramsHeight}px`;
-    });
+
+    // вирівнювання блоків у тарифі -- за найбільшим
+    heightUpdate('.tariff .options');
+    heightUpdate('.tariff .price');
+    heightUpdate('.tariff .params');
+
 }
 
 // rate.html
@@ -371,4 +366,46 @@ function checkCity(cityName){
         });
     }
 }
+
+
+// update height blocks
+function heightUpdate(selectors){
+    const windowWidth = window.innerWidth;
+
+    if(windowWidth > 776){
+
+        const elements = document.querySelectorAll(selectors);
+    
+        const toArray = [...elements];
+    
+        const toNumberArray = toArray.map(item => item.offsetHeight);
+    
+        const maxHeight = Math.max(...toNumberArray);
+    
+        elements.forEach(item => item.style.height = `${maxHeight}px`);
+    }
+
+}
+
+// cabinet
+document.getElementById('auth-form') && document.getElementById('auth-form').addEventListener('submit', function () {
+
+    document.querySelector('[type="submit"]').classList.add('loading');
+    this.classList.add('loading');
+
+    const inp_login = document.querySelector('[name=uname]', this);
+
+    fetch('https://my.wenet.lviv.ua/v3/index.php?'
+        +  'uname=' + document.querySelector('[name=uname]').value + '&'
+        +  'passw=' + document.querySelector('[name=passw]').value
+        , { credentials : 'include' })
+        .then(response => {
+            if (response.status === 200) {
+                window.location = '/my/';
+            }
+        });
+
+    return false;
+
+});
 // end
