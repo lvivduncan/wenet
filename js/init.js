@@ -162,11 +162,15 @@ checkboxs.forEach(element => {
 // faq
 if(document.getElementById('faq-content') !== null){
 
+    // 1 рівень
     document.querySelectorAll('#faq-content dt').forEach(item => {
         item.addEventListener('click', function(){
-            this.classList.toggle('active');
 
+            // document.querySelectorAll('#faq-content dt').forEach(item => item.classList.remove('active'));
+        
             this.closest('dl').querySelector('dd').classList.toggle('active');
+            
+            this.classList.toggle('active');
         });
     });
 }
@@ -408,4 +412,34 @@ document.getElementById('auth-form') && document.getElementById('auth-form').add
     return false;
 
 });
+
+
+/* 
+{
+    if (document.querySelector('#get') !== null) {
+        let counter = 2;
+
+        document.querySelector('#get').addEventListener('click', function(){
+            fetch(`/news/page${counter}`)
+            .then(response => {
+                if (response.status == 200) {
+                    return response.text();
+                }
+            })
+            .then(html => {
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(html, "text/html");
+                return doc;
+            })
+            .then(data => data.querySelectorAll('.post'))
+            .then(result => result.forEach(item => document.querySelector('#output').innerHTML += `<article class="post">${item.innerHTML}</article>`))
+
+            counter++;        
+        });    
+    }
+}
+ */
+
+
+
 // end

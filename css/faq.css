@@ -123,7 +123,6 @@
 }
 
 #faq-content dt svg {
-    /* margin-right: 10px; */
     width: 22px;
     height: 22px;
 }
@@ -144,4 +143,15 @@
 
 #faq-content dd.active{
     display: block;
+}
+
+/* вкладені */
+#faq-content .faq-inner {
+    margin: 0 -20px -20px;
+    border-color: var(--white)
+}
+
+#faq-content .faq-inner dt{
+    display: block;
+    background: none;
 }
